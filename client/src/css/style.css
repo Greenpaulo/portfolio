@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+:root {
+  --primary-color: rgb(5, 5, 143);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+}
+
+header#navbar {
+  color: var(--primary-color);
+  border-bottom: 1px var(--primary-color) solid;
+}
+
+#header-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#navbar h3 {
+  padding: 1rem 1.5rem;
+  font-size: 1.6rem;
+}
+
+#nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 3rem;
+}
+
+.nav-link {
+  list-style: none;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+section#main {
+  height: 90vh;
+  width: 80vw;
+  margin: 2rem auto;
+  -webkit-box-shadow: 7px 6px 21px 0px rgba(0, 0, 0, 0.23);
+  box-shadow: 7px 6px 21px 0px rgba(0, 0, 0, 0.23);
+  background: url("../../../imgs/oldham.jpg") no-repeat center center/cover;
+  /* background: rgb(46, 33, 163); */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+#main-title {
+  padding-bottom: 12rem;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 200;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+h1#name {
+  margin-top: 4rem;
+}
+
+/* Cursor */
+.txt-type > .txt {
+  border-right: 0.2rem solid #eee;
+}
+
+section#portfolio {
+  padding-bottom: 5rem;
+  margin-bottom: 10rem;
+}
+
+section#portfolio h2#section-heading {
+  font-size: 3rem;
+  text-align: center;
+  margin: 4rem 0;
+}
+
+section#portfolio #projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 5rem;
+}
+
+section#portfolio #projects h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+:root {
+  --level-one: translateZ(3rem);
+  --level-two: translateZ(6rem);
+  --level-three: translateZ(9rem);
+  --fw-normal: 400;
+  --fw-bold: 700;
+  --clr: #b7c9e5  ;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+.card {
+  width: 400px;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+}
+
+.card__content {
+  text-align: center;
+  position: relative;
+  padding: 15em 5em;
+  -webkit-transition: -webkit-transform 3s;
+  transition: -webkit-transform 3s;
+  transition: transform 3s;
+  transition: transform 3s, -webkit-transform 3s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.card:hover .card__content {
+  -webkit-transform: rotateY(0.5turn);
+          transform: rotateY(0.5turn);
+}
+
+.card__front,
+.card__back {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5em 3em;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.card__front#the_herbalist {
+  background-color: rgba(0, 0, 0, 0.1);
+  background-image: url("../../../imgs/the_herbalist.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.card__front#journey_to_dev {
+  background-color: rgba(0, 0, 0, 0.7);
+  background-image: url("../../../imgs/journey_to_dev.png");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  color: #dce5f3;
+}
+
+.card__front::before {
+  content: '';
+  position: absolute;
+  --spacer: 1em;
+  top: var(--spacer);
+  bottom: var(--spacer);
+  left: var(--spacer);
+  right: var(--spacer);
+  border: 3px solid currentColor;
+  -webkit-transform: var(--level-one);
+          transform: var(--level-one);
+}
+
+.card__title {
+  font-size: 3.5rem;
+  -webkit-transform: var(--level-three);
+          transform: var(--level-three);
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  text-transform: uppercase;
+}
+
+.card__subtitle {
+  -webkit-transform: var(--level-two);
+          transform: var(--level-two);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: .75rem;
+  margin-bottom: 0.5rem;
+  font-weight: var(--fw-bold);
+  opacity: .7;
+}
+
+.card__body {
+  -webkit-transform: var(--level-two);
+          transform: var(--level-two);
+  font-weight: var(fw-normal);
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.card__back {
+  -webkit-transform: rotateY(0.5turn);
+          transform: rotateY(0.5turn);
+  color: var(--clr);
+  background: #333;
+}
+
+.card__back h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.card__back ul {
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+.card__back a {
+  text-decoration: none;
+  color: #333;
+  background-color: white;
+  display: block;
+  width: 75%;
+  margin: 2rem auto;
+  padding: 0.5rem 0;
+  border-radius: 10px;
+  font-weight: bold;
+}
