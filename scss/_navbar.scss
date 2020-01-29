@@ -1,0 +1,31 @@
+header#navbar {
+  color: black;
+  border-bottom: 1px black solid;
+  padding-top: 1rem;
+}
+
+#header-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+#navbar h3 {
+  padding: 1rem 1.5rem;
+  font-size: 1.6rem;
+  // text-transform: uppercase;
+  // color: var(--primary-color);
+}
+
+#nav-menu {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  margin-right: 3rem;
+}
+
+.nav-link {
+  list-style: none;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+}

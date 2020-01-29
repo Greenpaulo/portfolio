@@ -1,0 +1,66 @@
+section#main {
+  display: flex;
+  height: 85vh;
+}
+
+#main-info {
+  width: 40vw;
+  margin-top: 12rem;
+
+  #title {
+    width: 50%;
+    
+    h1 {
+      color: black;
+      font-size: 4rem;
+      font-weight: 200;
+    }
+  }
+
+  #links {
+    margin-top: 2rem;
+    i {
+      margin-right: 2rem;
+    }
+  }
+}
+
+#wrapper {
+  margin-top: 2rem;
+}
+canvas {
+  position: absolute;
+  top: 19vh;
+  left: 61.5vw;
+}
+
+#main-title {
+  height: 50vh;
+  width: 40vw;
+  margin: 1rem auto;
+  -webkit-box-shadow: 7px 6px 21px 0px rgba(0,0,0,0.23);
+  -moz-box-shadow: 7px 6px 21px 0px rgba(0,0,0,0.23);
+  box-shadow: 7px 6px 21px 0px rgba(0,0,0,0.23);
+  background: url('../../../imgs/oldham.jpg') no-repeat center center / cover;
+  /* background: rgb(46, 33, 163); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+// h1 {
+//   font-size: 4rem;
+//   font-weight: 200;
+//   color: white;
+//   margin-bottom: 1rem; 
+// }
+
+h1#name {
+  margin-top: 4rem;
+}
+
+/* Cursor */
+.txt-type > .txt {
+  border-right: 0.2rem solid #eee;
+}

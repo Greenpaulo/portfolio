@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+@import 'navbar';
+@import 'showcase';
+@import 'flip-card';
+@import 'portfolio';
+
+:root {
+  --primary-color: rgb(5, 5, 143);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  // padding: 0 2rem;
+} 

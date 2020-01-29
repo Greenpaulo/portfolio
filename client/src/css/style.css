@@ -1,27 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
-:root {
-  --primary-color: rgb(5, 5, 143);
-}
-
-* {
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  font-family: 'Raleway', sans-serif;
-  height: 100vh;
-}
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-  overflow: hidden;
-}
-
 header#navbar {
-  color: var(--primary-color);
-  border-bottom: 1px var(--primary-color) solid;
+  color: black;
+  border-bottom: 1px black solid;
+  padding-top: 1rem;
 }
 
 #header-content {
@@ -57,9 +38,49 @@ header#navbar {
 }
 
 section#main {
-  height: 90vh;
-  width: 80vw;
-  margin: 2rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 85vh;
+}
+
+#main-info {
+  width: 40vw;
+  margin-top: 12rem;
+}
+
+#main-info #title {
+  width: 50%;
+}
+
+#main-info #title h1 {
+  color: black;
+  font-size: 4rem;
+  font-weight: 200;
+}
+
+#main-info #links {
+  margin-top: 2rem;
+}
+
+#main-info #links i {
+  margin-right: 2rem;
+}
+
+#wrapper {
+  margin-top: 2rem;
+}
+
+canvas {
+  position: absolute;
+  top: 19vh;
+  left: 61.5vw;
+}
+
+#main-title {
+  height: 50vh;
+  width: 40vw;
+  margin: 1rem auto;
   -webkit-box-shadow: 7px 6px 21px 0px rgba(0, 0, 0, 0.23);
   box-shadow: 7px 6px 21px 0px rgba(0, 0, 0, 0.23);
   background: url("../../../imgs/oldham.jpg") no-repeat center center/cover;
@@ -77,17 +98,6 @@ section#main {
   text-align: center;
 }
 
-#main-title {
-  padding-bottom: 12rem;
-}
-
-h1 {
-  font-size: 6rem;
-  font-weight: 200;
-  color: white;
-  margin-bottom: 1rem;
-}
-
 h1#name {
   margin-top: 4rem;
 }
@@ -95,30 +105,6 @@ h1#name {
 /* Cursor */
 .txt-type > .txt {
   border-right: 0.2rem solid #eee;
-}
-
-section#portfolio {
-  padding-bottom: 5rem;
-  margin-bottom: 10rem;
-}
-
-section#portfolio h2#section-heading {
-  font-size: 3rem;
-  text-align: center;
-  margin: 4rem 0;
-}
-
-section#portfolio #projects {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  grid-gap: 5rem;
-}
-
-section#portfolio #projects h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
 }
 
 :root {
@@ -262,4 +248,48 @@ section#portfolio #projects h3 {
   padding: 0.5rem 0;
   border-radius: 10px;
   font-weight: bold;
+}
+
+section#portfolio {
+  padding-bottom: 5rem;
+  border-top: 1px solid black;
+}
+
+section#portfolio h2#section-heading {
+  font-size: 3rem;
+  text-align: center;
+  margin: 4rem 0 6rem 0;
+}
+
+section#portfolio #projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 5rem;
+}
+
+section#portfolio #projects h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+:root {
+  --primary-color: rgb(5, 5, 143);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
 }
