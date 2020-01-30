@@ -162,8 +162,8 @@ function init() {
         id: 'ball' + i,
         diameter: 5,
         degrees: 0,
-        speed: 2 + (loop * 0.15) - (i * 0.2),
-        // speed: (2 + (loop * 0.15) - (i * 0.2))/3,
+        // speed: 2 + (loop * 0.15) - (i * 0.2),
+        speed: (2 + (loop * 0.15) - (i * 0.2))/3,
         colour: 'hsla(' + (i * (360 / loop)) + ',50%,50%,1)',
         orbitalRadius: 11 * (i + 1),
         parentBody: 'sun'
