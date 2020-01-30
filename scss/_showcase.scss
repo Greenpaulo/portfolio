@@ -4,7 +4,7 @@ section#main {
 }
 
 #main-info {
-  width: 40vw;
+  // width: 40vw;
   margin-top: 12rem;
 
   #title {
@@ -31,7 +31,7 @@ section#main {
 canvas {
   position: absolute;
   top: 19vh;
-  left: 61.5vw;
+  left: 64.5vw;
 }
 
 #main-title {
@@ -64,3 +64,141 @@ h1#name {
 .txt-type > .txt {
   border-right: 0.2rem solid #eee;
 }
+
+
+// Media queries
+@media (max-width: 1500px){
+  canvas {  
+      left: 69.5vw;
+  }
+}
+@media (max-width: 1400px){
+  canvas {  
+      left: 66.5vw;
+  }
+}
+@media (max-width: 1300px){
+  canvas {  
+      left: 69.5vw;
+  }
+}
+@media (max-width: 1200px){
+  canvas {  
+      left: 72.5vw;
+  }
+}
+
+// Ipad pro
+@media (max-width: 1024px){
+
+  section#main {
+    height: 79vh;
+  }
+  
+  
+  #main-info {
+    margin-left: 5rem;
+    margin-top: 15rem;
+  }
+
+  canvas {
+    position: absolute;
+    // top: 6vh;
+    top: 10vh;
+    left: 67.5vw;
+  }
+}
+
+@media (max-width: 1024px) and (min-height: 1350px) {
+  canvas {
+    top: 6vh;
+  }
+}
+
+
+// ipad
+@media (max-width: 768px){
+  canvas {
+    position: absolute;
+    top: 10vh;
+    left: 78.5vw;
+  }
+}
+
+// Large mobile width eg Iphone 6/7/8 plus, Pixel2 XL
+@media (max-width: 675px){
+  #main-info {
+    margin-left: 2rem;
+    margin-top: 6rem;
+
+    #links i {
+    margin-right: 1rem;
+    }
+  }
+  
+  #main-info #title h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 573px){
+  canvas {
+    top: 14vh;
+  }
+}
+
+@media (max-width: 559px){
+  canvas {
+    top: 17vh;
+    left: 77.5vw;
+  }
+}
+
+@media (max-width: 512px){
+  canvas {
+    top: 17vh;
+    left: 42.5vw;
+  }
+}
+
+@media (max-width: 414px){
+  canvas {
+    top: 18vh;
+    left: 52.5vw;
+  }
+}
+
+// IphoneX
+@media (max-width: 375px){
+  canvas {
+    left: 58.5vw;
+  }
+}
+
+// Iphone5
+@media (max-width: 320px){
+  canvas {
+    top: 24vh;
+    left: 81.5vw;
+  }
+}
+
+
+
+
+// iphone 6/7/8, 
+@media (max-height: 667px) and (min-width: 375px){
+  canvas {
+    left: 64.5vw;
+  }
+}
+
+// Galaxy S5, 
+@media (max-height: 667px) and (min-width: 360px){
+  canvas {
+    top: 21vh;
+    left: 70.5vw;
+  }
+}
+
+

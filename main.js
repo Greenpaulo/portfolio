@@ -163,6 +163,7 @@ function init() {
         diameter: 5,
         degrees: 0,
         speed: 2 + (loop * 0.15) - (i * 0.2),
+        // speed: (2 + (loop * 0.15) - (i * 0.2))/3,
         colour: 'hsla(' + (i * (360 / loop)) + ',50%,50%,1)',
         orbitalRadius: 11 * (i + 1),
         parentBody: 'sun'
@@ -184,9 +185,90 @@ function init() {
   }
   function resizeCanvas() {
     let rect = wrapper.getBoundingClientRect();
-    width = window.innerWidth/2;
-    height = window.innerHeight/1.3 - rect.top - 2;
-    canvas.width = width/3;
+    // Desktop
+    // width = window.innerWidth/2;
+    // Ipad Pro & Ipad
+    // width = window.innerWidth;
+    // Pixel2 XL,iphone 6/7/8 plus, iphoneX
+    // width = window.innerWidth*2;
+
+    // Desktop/Ipad Pro/Ipad
+    // canvas.width = width/3;
+    // Pixel2 XL,iphone 6/7/8 plus, iphoneX
+    // canvas.width = width;
+
+    switch (true) {
+      // Large Desktop Dislay
+      case (window.innerWidth >= 1400):
+        width = window.innerWidth / 2;
+        console.log('case1')
+        break;
+      // Desktop
+      case (window.innerWidth > 1024 && window.innerWidth < 1400):
+        width = window.innerWidth / 1.5;
+        console.log('case2')
+        break;
+      // Ipad Pro & Ipad
+      case (window.innerWidth <= 1024 && window.innerWidth > 675):
+        width = window.innerWidth;
+        console.log('case3')
+        break;
+      case (window.innerWidth <= 675 && window.innerWidth > 559):
+        width = window.innerWidth * 1.2;
+        console.log('case4')
+        break;
+      case (window.innerWidth <= 559 && window.innerWidth > 512):
+        width = window.innerWidth * 1.3;
+        console.log('case4')
+        break;
+      case (window.innerWidth <= 512 && window.innerWidth > 414):
+        width = window.innerWidth * 2;
+        console.log('case4')
+        break;
+      // Pixel2 XL,iphone 6/7/8 plus, iphoneX
+      case (window.innerWidth <= 414 && window.innerWidth > 320):
+        width = window.innerWidth * 2;
+        console.log('case5');
+        break;
+      // Small mobile e.g. iphone5
+      case (window.innerWidth <= 320):
+        width = window.innerWidth * 2.1;
+        console.log('case6');
+        break;
+      // default:
+      //   width = window.innerWidth;
+    }
+
+    switch (true) {
+      // Desktop/Ipad Pro/Ipad
+      case (window.innerWidth > 414):
+        canvas.width = width / 3;
+        break;
+      // // Pixel2 XL,iphone 6/7/8 plus, iphoneX
+      case (window.innerWidth <= 414):
+        canvas.width = width;
+        break;
+    }
+    console.log('width', window.innerWidth);
+    console.log('height', window.innerHeight);
+    console.log('canvas width', width);
+    
+    
+    // Desktop
+    // height = window.innerHeight / 1.3 - rect.top - 2;
+    // height = window.innerHeight/1.1 - rect.top - 2;
+
+    switch (true) {
+      // Desktop/Ipad Pro/Ipad
+      case (window.innerWidth >= 768):
+        height = window.innerHeight / 1.2 - rect.top - 2;
+        break;
+      // // Pixel2 XL,iphone 6/7/8 plus, iphoneX
+      case (window.innerWidth < 768):
+        height = window.innerHeight / 1.1 - rect.top - 2;
+        break;
+    }
+
     canvas.height = height;
     for (let i = 0; i < systems.length; i++) {
       systems[i].x = width * .5;
