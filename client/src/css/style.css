@@ -59,7 +59,7 @@ section#main {
 }
 
 #main-info #links {
-  margin-top: 2rem;
+  margin-top: 1.8rem;
 }
 
 #main-info #links i {
@@ -72,7 +72,7 @@ section#main {
 
 canvas {
   position: absolute;
-  top: 19vh;
+  top: 16vh;
   left: 64.5vw;
 }
 
@@ -106,6 +106,12 @@ h1#name {
 @media (max-width: 1200px) {
   canvas {
     left: 72.5vw;
+  }
+}
+
+@media (max-width: 1175px) {
+  #main-info {
+    margin-left: 3rem;
   }
 }
 
@@ -148,6 +154,12 @@ h1#name {
   }
   #main-info #title h1 {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 675px) and (min-height: 880px) {
+  canvas {
+    top: 9vh;
   }
 }
 
@@ -204,6 +216,39 @@ h1#name {
   }
 }
 
+@media (min-height: 883px) and (min-width: 1025px) {
+  canvas {
+    top: 8vh;
+  }
+}
+
+section#about {
+  border-top: 1px solid black;
+}
+
+#about-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin-bottom: 5rem;
+}
+
+#about-content #photo {
+  margin: auto;
+}
+
+#about-content #photo img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+#about-content #info p {
+  margin-bottom: 1rem;
+}
+
 :root {
   --level-one: translateZ(3rem);
   --level-two: translateZ(6rem);
@@ -225,7 +270,7 @@ h1#name {
           perspective: 800px;
 }
 
-.card__content {
+.card-content {
   text-align: center;
   position: relative;
   padding: 15em 5em;
@@ -237,13 +282,13 @@ h1#name {
           transform-style: preserve-3d;
 }
 
-.card:hover .card__content {
+.card:hover .card-content {
   -webkit-transform: rotateY(0.5turn);
           transform: rotateY(0.5turn);
 }
 
-.card__front,
-.card__back {
+.card-front,
+.card-back {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -260,14 +305,14 @@ h1#name {
       align-content: center;
 }
 
-.card__front#the_herbalist {
+.card-front#the_herbalist {
   background-color: rgba(0, 0, 0, 0.1);
   background-image: url("../../../imgs/the_herbalist.png");
   background-size: cover;
   background-position: center;
 }
 
-.card__front#journey_to_dev {
+.card-front#journey_to_dev {
   background-color: rgba(0, 0, 0, 0.7);
   background-image: url("../../../imgs/journey_to_dev.png");
   background-size: cover;
@@ -276,7 +321,7 @@ h1#name {
   color: #dce5f3;
 }
 
-.card__front::before {
+.card-front::before {
   content: '';
   position: absolute;
   --spacer: 1em;
@@ -289,7 +334,7 @@ h1#name {
           transform: var(--level-one);
 }
 
-.card__title {
+.card-title {
   font-size: 3.5rem;
   -webkit-transform: var(--level-three);
           transform: var(--level-three);
@@ -299,7 +344,7 @@ h1#name {
   text-transform: uppercase;
 }
 
-.card__subtitle {
+.card-subtitle {
   -webkit-transform: var(--level-two);
           transform: var(--level-two);
   text-transform: uppercase;
@@ -310,7 +355,7 @@ h1#name {
   opacity: .7;
 }
 
-.card__body {
+.card-body {
   -webkit-transform: var(--level-two);
           transform: var(--level-two);
   font-weight: var(fw-normal);
@@ -318,29 +363,30 @@ h1#name {
   line-height: 1.6;
 }
 
-.card__back {
+.card-back {
   -webkit-transform: rotateY(0.5turn);
           transform: rotateY(0.5turn);
   color: var(--clr);
   background: #333;
 }
 
-.card__back h2 {
+.card-back h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
 }
 
-.card__back ul {
+.card-back ul {
   list-style: none;
   font-size: 1.5rem;
 }
 
-.card__back a {
+.card-back a {
   text-decoration: none;
-  color: black;
-  background-color: white;
+  color: white;
   display: block;
-  width: 60%;
+  width: 50%;
   margin: 1.3rem auto;
   padding: 1rem 0;
   border-radius: 10px;
@@ -348,15 +394,17 @@ h1#name {
   font-size: 1.2rem;
 }
 
+.card-back a.app-btn {
+  background: green;
+}
+
+.card-back a.code-btn {
+  background: purple;
+}
+
 section#portfolio {
   padding-bottom: 5rem;
   border-top: 1px solid black;
-}
-
-section#portfolio h2#section-heading {
-  font-size: 3rem;
-  text-align: center;
-  margin: 4rem 0 6rem 0;
 }
 
 section#portfolio #projects {
@@ -370,10 +418,6 @@ section#portfolio #projects {
 section#portfolio #projects h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
-}
-
-section#portfolio #projects p.description {
-  line-height: 2rem;
 }
 
 section#portfolio #projects h4 {
@@ -464,4 +508,14 @@ body {
   max-width: 1100px;
   margin: auto;
   overflow: hidden;
+}
+
+.section-heading {
+  font-size: 3rem;
+  text-align: center;
+  margin: 4rem 0 6rem 0;
+}
+
+p.description {
+  line-height: 2rem;
 }

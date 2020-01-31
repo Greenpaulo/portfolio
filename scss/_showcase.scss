@@ -18,7 +18,7 @@ section#main {
   }
 
   #links {
-    margin-top: 2rem;
+    margin-top: 1.8rem;
     i {
       margin-right: 2rem;
     }
@@ -30,7 +30,7 @@ section#main {
 }
 canvas {
   position: absolute;
-  top: 19vh;
+  top: 16vh;
   left: 64.5vw;
 }
 
@@ -88,6 +88,12 @@ h1#name {
   }
 }
 
+@media (max-width: 1175px) {
+  #main-info {
+    margin-left: 3rem;
+  }
+}
+
 // Ipad pro
 @media (max-width: 1024px){
 
@@ -138,6 +144,12 @@ h1#name {
   
   #main-info #title h1 {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 675px) and (min-height: 880px){
+  canvas {
+    top: 9vh;
   }
 }
 
@@ -198,6 +210,12 @@ h1#name {
   canvas {
     top: 21vh;
     left: 70.5vw;
+  }
+}
+
+@media (min-height:883px) and (min-width: 1025px){
+  canvas {
+    top: 8vh;
   }
 }
 

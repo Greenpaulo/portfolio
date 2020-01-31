@@ -1,0 +1,25 @@
+section#about {
+  border-top: 1px solid black;
+}
+
+#about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 5rem;
+
+  #photo {
+    margin: auto;
+    img {
+      height: 300px;
+      width: 300px;
+      border-radius: 50%;
+      border: 1px solid black;
+    }
+  }
+
+  #info {
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+}

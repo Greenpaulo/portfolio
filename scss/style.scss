@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 @import 'navbar';
 @import 'showcase';
+@import 'about';
 @import 'flip-card';
 @import 'portfolio';
 
@@ -29,3 +30,13 @@ body {
   overflow: hidden;
   // padding: 0 2rem;
 } 
+
+.section-heading {
+  font-size: 3rem;
+  text-align: center;
+  margin: 4rem 0 6rem 0;
+}
+
+p.description {
+  line-height: 2rem;
+}

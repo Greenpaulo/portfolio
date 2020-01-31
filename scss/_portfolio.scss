@@ -2,13 +2,6 @@ section#portfolio {
   padding-bottom: 5rem;
   border-top: 1px solid black;
   
-
-  h2#section-heading {
-    font-size: 3rem;
-    text-align: center;
-    margin: 4rem 0 6rem 0;
-  }
-
   #projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -17,10 +10,6 @@ section#portfolio {
     h3 {
       font-size: 2rem;
       margin-bottom: 1rem;
-    }
-
-    p.description {
-      line-height: 2rem;
     }
 
     h4 {
@@ -39,6 +28,7 @@ section#portfolio {
       grid-auto-flow: row;
     }
 
+    // Tech logos
     img {
       max-height: 50px;
       margin-right: 0.6rem;

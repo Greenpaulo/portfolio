@@ -20,7 +20,7 @@
   perspective: 800px;
 }
 
-.card__content {
+.card-content {
   text-align: center;
   position: relative;
   padding: 15em 5em;
@@ -28,12 +28,12 @@
   transform-style: preserve-3d;
 }
 
-.card:hover .card__content {
+.card:hover .card-content {
   transform: rotateY(.5turn);
 }
 
-.card__front,
-.card__back {
+.card-front,
+.card-back {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -46,7 +46,7 @@
   align-content: center;
 }
 
-.card__front#the_herbalist {
+.card-front#the_herbalist {
   background-color:  rgba(0, 0, 0, .1);
   background-image: url('../../../imgs/the_herbalist.png');
   background-size: cover;
@@ -55,7 +55,7 @@
   // color: #333;
   // color: white;
 }
-.card__front#journey_to_dev {
+.card-front#journey_to_dev {
   background-color:  rgba(0, 0, 0, .7);
   background-image: url('../../../imgs/journey_to_dev.png');
   background-size: cover;
@@ -65,7 +65,7 @@
   // color: white;
 }
 
-.card__front::before {
+.card-front::before {
   content: '';
   position: absolute;
   --spacer: 1em;
@@ -77,31 +77,31 @@
   transform: var(--level-one);
 }
 
-.card__title {
+.card-title {
   font-size: 3.5rem;
   transform: var(--level-three);
   order: 2;
   text-transform: uppercase;
 }
 
-.card__subtitle {
+.card-subtitle {
   transform: var(--level-two);
-  text-transform: uppercase;
-  letter-spacing: 4px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
   font-size: .75rem;
   margin-bottom: 0.5rem;
   font-weight: var(--fw-bold);
   opacity: .7;
 }
 
-.card__body {
+.card-body {
   transform: var(--level-two);
   font-weight: var(fw-normal);
   font-size: 1.5rem;
   line-height: 1.6;
 }
 
-.card__back {
+.card-back {
   transform: rotateY(.5turn);
   color: var(--clr);
   background: #333;
@@ -109,6 +109,8 @@
   h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
   }
 
   ul {
@@ -118,14 +120,23 @@
 
   a {
     text-decoration: none;
-    color:black;
-    background-color: white;
+    color:white;
     display: block;
-    width: 60%;
+    width: 50%;
     margin: 1.3rem auto;
     padding: 1rem 0;
     border-radius: 10px;
     font-weight: bold;
     font-size: 1.2rem;
+
+    &.app-btn {
+      background: green;
+    }
+
+    &.code-btn {
+      background: purple;
+    }
   }
+
+
 }
