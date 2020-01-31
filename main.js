@@ -163,7 +163,7 @@
         diameter: 5,
         degrees: 0,
         // speed: 2 + (loop * 0.15) - (i * 0.2),
-        speed: (2 + (loop * 0.15) - (i * 0.2))/5,
+        speed: (2 + (loop * 0.15) - (i * 0.2))/2,
         colour: 'hsla(' + (i * (360 / loop)) + ',50%,50%,1)',
         orbitalRadius: 11 * (i + 1),
         parentBody: 'sun'
@@ -186,6 +186,7 @@
   function resizeCanvas() {
     let rect = wrapper.getBoundingClientRect();
     // Desktop
+    // width = window.innerWidth/2;
     // width = window.innerWidth/2;
     // Ipad Pro & Ipad
     // width = window.innerWidth;
@@ -218,72 +219,79 @@
         console.log('case4')
         break;
       case (window.innerWidth <= 559 && window.innerWidth > 512):
-        width = window.innerWidth * 1.3;
+        width = window.innerWidth * 1.4;
         console.log('case4')
         break;
       case (window.innerWidth <= 512 && window.innerWidth > 414):
-        width = window.innerWidth * 2;
+        width = window.innerWidth * 1.6;
         console.log('case4')
         break;
       // Pixel2 XL,iphone 6/7/8 plus, iphoneX
-      case (window.innerWidth <= 414 && window.innerWidth > 320):
-        width = window.innerWidth * 2;
+      case (window.innerWidth <= 414 && window.innerWidth > 380):
+        width = window.innerWidth * 1.8;
         console.log('case5');
         break;
       // Small mobile e.g. iphone5
-      case (window.innerWidth <= 320):
-        width = window.innerWidth * 2.1;
+      case (window.innerWidth <= 380):
+        width = window.innerWidth * 2.5;
         console.log('case6');
         break;
       // default:
       //   width = window.innerWidth;
     }
 
-    switch (true) {
-      // Desktop/Ipad Pro/Ipad
-      case (window.innerWidth > 414):
-        canvas.width = width / 3;
-        break;
-      // // Pixel2 XL,iphone 6/7/8 plus, iphoneX
-      case (window.innerWidth <= 414):
-        canvas.width = width;
-        break;
-    }
-    console.log('width', window.innerWidth);
-    console.log('height', window.innerHeight);
-    console.log('canvas width', width);
+    canvas.width = width/3;
+
+
+    // switch (true) {
+    //   // Desktop/Ipad Pro/Ipad
+    //   case (window.innerWidth > 414):
+    //     canvas.width = width / 3;
+    //     break;
+    //   // // Pixel2 XL,iphone 6/7/8 plus, iphoneX
+    //   case (window.innerWidth <= 414):
+    //     canvas.width = width;
+    //     break;
+    // }
+    // console.log('before calc', window.innerHeight);
+    // console.log('rect', rect.top);
+    // height = window.innerHeight / 1.2 - rect.top - 2;
+    height = window.innerHeight / 1.3;
+    // console.log('after calc', height);
+    
     
     
     // Desktop
-    // height = window.innerHeight / 1.3 - rect.top - 2;
     // height = window.innerHeight/1.1 - rect.top - 2;
-
-    switch (true) {
-      // Desktop/Ipad Pro/Ipad
-      case (window.innerWidth > 1024):
-        // height = window.innerHeight / 1.2 - rect.top - 2;
-        height = window.innerHeight / 1.1- rect.top - 2;
-        break;
-      case (window.innerWidth <= 1024 && window.innerWidth >= 768):
-        // height = window.innerHeight / 1.2 - rect.top - 2;
-        height = window.innerHeight / 1.2- rect.top - 2;
-        break;
-      // // Pixel2 XL,iphone 6/7/8 plus, iphoneX
-      case (window.innerWidth < 768):
-        height = window.innerHeight / 1.1 - rect.top - 2;
-        break;
+    
+    // switch (true) {
+    //     // Desktop/Ipad Pro/Ipad
+    //     case (window.innerWidth > 1024):
+    //       height = window.innerHeight / 1.3;
+    //       break;
+    //     case (window.innerWidth <= 1024 && window.innerWidth >= 768):
+    //       height = window.innerHeight / 1.3;
+    //       break;
+    //     // // Pixel2 XL,iphone 6/7/8 plus, iphoneX
+    //     case (window.innerWidth < 768):
+    //       break;
+    //   }
+      console.log('width', window.innerWidth);
+      console.log('height', window.innerHeight);
+      // console.log('calculated height', height);
+      // console.log('canvas width', canvas.width);
+      // console.log('canvas height', canvas.height);
+      
+      canvas.height = height;
+      for (let i = 0; i < systems.length; i++) {
+        systems[i].x = width * .5;
+        systems[i].y = height * .5;
+      }
     }
-
-    canvas.height = height;
-    for (let i = 0; i < systems.length; i++) {
-      systems[i].x = width * .5;
-      systems[i].y = height * .5;
-    }
-  }
-
-  function update() {
-    for (let loop = systems.length, i = 0; i < loop; i++) {
-      systems[i].update();
+    
+    function update() {
+      for (let loop = systems.length, i = 0; i < loop; i++) {
+        systems[i].update();
     }
   }
 

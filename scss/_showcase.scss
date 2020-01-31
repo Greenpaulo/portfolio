@@ -1,5 +1,6 @@
 section#main {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   height: 85vh;
 }
 
@@ -8,7 +9,6 @@ section#main {
   margin-top: 12rem;
 
   #title {
-    width: 50%;
     
     h1 {
       color: black;
@@ -26,12 +26,17 @@ section#main {
 }
 
 #wrapper {
-  margin-top: 2rem;
+  // position: relative;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
 }
 canvas {
-  position: absolute;
-  top: 16vh;
-  left: 64.5vw;
+  // position: absolute;
+  // top: 16vh;
+  // left: 64.5vw;
+  z-index: -1;
 }
 
 // #main-title {
@@ -67,26 +72,26 @@ h1#name {
 
 
 // Media queries
-@media (max-width: 1500px){
-  canvas {  
-      left: 69.5vw;
-  }
-}
-@media (max-width: 1400px){
-  canvas {  
-      left: 66.5vw;
-  }
-}
-@media (max-width: 1300px){
-  canvas {  
-      left: 69.5vw;
-  }
-}
-@media (max-width: 1200px){
-  canvas {  
-      left: 72.5vw;
-  }
-}
+// @media (max-width: 1500px){
+//   canvas {  
+//       left: 69.5vw;
+//   }
+// }
+// @media (max-width: 1400px){
+//   canvas {  
+//       left: 66.5vw;
+//   }
+// }
+// @media (max-width: 1300px){
+//   canvas {  
+//       left: 69.5vw;
+//   }
+// }
+// @media (max-width: 1200px){
+//   canvas {  
+//       left: 72.5vw;
+//   }
+// }
 
 @media (max-width: 1175px) {
   #main-info {
@@ -97,39 +102,58 @@ h1#name {
 // Ipad pro
 @media (max-width: 1024px){
 
-  section#main {
-    height: 79vh;
-  }
+  // section#main {
+  //   height: 79vh;
+  // }
   
   
-  #main-info {
-    margin-left: 5rem;
-    margin-top: 15rem;
-  }
+  // #main-info {
+  //   margin-left: 5rem;
+  //   margin-top: 15rem;
+  // }
 
-  canvas {
-    position: absolute;
-    // top: 6vh;
-    top: 10vh;
-    left: 67.5vw;
+  // canvas {
+  //   position: relative;
+  //   // bottom: 30px;
+  // }
+}
+
+// @media (max-width: 1024px) and (min-height: 1350px) {
+//   canvas {
+//     top: 6vh;
+//   }
+// }
+
+@media (max-width: 980px){
+  
+  #main-info #title h1 {
+    font-size: 3.5rem;
   }
 }
 
-@media (max-width: 1024px) and (min-height: 1350px) {
-  canvas {
-    top: 6vh;
+@media (max-width: 875px){
+  
+  #main-info #title h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 760px){
+  
+  #main-info #title h1 {
+    font-size: 2.5rem;
   }
 }
 
 
-// ipad
-@media (max-width: 768px){
-  canvas {
-    position: absolute;
-    top: 10vh;
-    left: 78.5vw;
-  }
-}
+// // ipad
+// @media (max-width: 768px){
+//   canvas {
+//     position: absolute;
+//     top: 10vh;
+//     left: 78.5vw;
+//   }
+// }
 
 // Large mobile width eg Iphone 6/7/8 plus, Pixel2 XL
 @media (max-width: 675px){
@@ -145,78 +169,101 @@ h1#name {
   #main-info #title h1 {
     font-size: 2rem;
   }
-}
 
-@media (max-width: 675px) and (min-height: 880px){
   canvas {
-    top: 9vh;
+    position: relative;
+    left: 100px;
   }
 }
 
-@media (max-width: 573px){
+@media (max-width: 560px){
+  #main-info #title h1 {
+    font-size: 1.5rem;
+  }
+
   canvas {
-    top: 14vh;
+    position: relative;
+    left: 100px;
+
   }
 }
 
-@media (max-width: 559px){
+@media (max-width: 390px) {
   canvas {
-    top: 17vh;
-    left: 77.5vw;
+    left: 0px;
   }
 }
 
-@media (max-width: 512px){
-  canvas {
-    top: 17vh;
-    left: 42.5vw;
-  }
-}
+// @media (max-width: 675px) and (min-height: 880px){
+//   canvas {
+//     top: 9vh;
+//   }
+// }
 
-@media (max-width: 414px){
-  canvas {
-    top: 18vh;
-    left: 52.5vw;
-  }
-}
+// @media (max-width: 573px){
+//   canvas {
+//     top: 14vh;
+//   }
+// }
 
-// IphoneX
-@media (max-width: 375px){
-  canvas {
-    left: 58.5vw;
-  }
-}
+// @media (max-width: 559px){
+//   canvas {
+//     top: 17vh;
+//     left: 77.5vw;
+//   }
+// }
 
-// Iphone5
-@media (max-width: 320px){
-  canvas {
-    top: 24vh;
-    left: 81.5vw;
-  }
-}
+// @media (max-width: 512px){
+//   canvas {
+//     top: 17vh;
+//     left: 42.5vw;
+//   }
+// }
+
+// @media (max-width: 414px){
+//   canvas {
+//     top: 18vh;
+//     left: 52.5vw;
+//   }
+// }
+
+// // IphoneX
+// @media (max-width: 375px){
+//   canvas {
+//     left: 58.5vw;
+//   }
+// }
+
+// // Iphone5
+// @media (max-width: 320px){
+//   canvas {
+//     top: 24vh;
+//     left: 81.5vw;
+//   }
+// }
 
 
 
 
-// iphone 6/7/8, 
-@media (max-height: 667px) and (min-width: 375px){
-  canvas {
-    left: 64.5vw;
-  }
-}
+// // iphone 6/7/8, 
+// @media (max-height: 667px) and (min-width: 375px){
+//   canvas {
+//     left: 64.5vw;
+//   }
+// }
 
-// Galaxy S5, 
-@media (max-height: 667px) and (min-width: 360px){
-  canvas {
-    top: 21vh;
-    left: 70.5vw;
-  }
-}
+// // Galaxy S5, 
+// @media (max-height: 667px) and (min-width: 360px){
+//   canvas {
+//     top: 21vh;
+//     left: 70.5vw;
+//   }
+// }
 
-@media (min-height:883px) and (min-width: 1025px){
-  canvas {
-    top: 8vh;
-  }
-}
+// @media (min-height:883px) and (min-width: 1025px){
+//   canvas {
+//     top: 8vh;
+//   }
+// }
 
 
