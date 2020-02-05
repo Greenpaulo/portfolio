@@ -164,7 +164,6 @@ section#about {
   height: 300px;
   width: 300px;
   border-radius: 50%;
-  border: 1px solid black;
 }
 
 #about-content #info p {
@@ -406,6 +405,10 @@ section#portfolio #projects img[src="imgs/bootstrap.png"] {
 
 #journey-card, #journey-description {
   margin-top: 2rem;
+}
+
+section#skills {
+  border-top: 1px solid black;
 }
 
 :root {

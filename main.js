@@ -331,3 +331,64 @@
   animate();
 
 }());
+
+
+
+
+
+
+
+
+// Skills Chart
+// Options
+var options = {
+  series: [14, 14, 13, 8, 10, 5, 10],
+  chart: {
+    width: 380,
+    type: 'pie',
+  },
+  labels: ['HTML', 'CSS', 'JavaScript', 'Sass', 'React', 'Vue', 'Node'],
+  responsive: [{
+    breakpoint: 480,
+    options: {
+      chart: {
+        width: 200
+      },
+      legend: {
+        position: 'bottom'
+      }
+    }
+  }]
+};
+
+
+// const options = {
+//   series: [{
+//     data: [14, 14, 13, 8, 10, 5, 10]
+//   }],
+//   chart: {
+//     type: 'bar',
+//     height: 350
+//   },
+//   plotOptions: {
+//     bar: {
+//       horizontal: true,
+//     }
+//   },
+//   dataLabels: {
+//     enabled: false
+//   },
+//   xaxis: {
+//     categories: ['HTML', 'CSS', 'JavaScript', 'Sass', 'React', 'Vue', 'Node'
+//     ],
+//   },
+//   plotOptions: {
+//     title: 'Time Spent Learning'
+//   }
+// };
+
+// Init Chart
+const chart = new ApexCharts(document.getElementById('chart'), options);
+
+//Render Chart
+chart.render();

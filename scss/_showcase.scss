@@ -26,16 +26,12 @@ section#main {
 }
 
 #wrapper {
-  // position: relative;
   display: flex;
   justify-content: flex-end;
   height: 100%;
   width: 100%;
 }
 canvas {
-  // position: absolute;
-  // top: 16vh;
-  // left: 64.5vw;
   z-index: -1;
 }
 
