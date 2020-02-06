@@ -1,0 +1,16 @@
+section#contact {
+  border-top: 1px solid black;
+}
+
+#wrapper2 {
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+
+  canvas {
+    z-index: -1;
+    position: relative;
+    right: 650px;
+  }
+}

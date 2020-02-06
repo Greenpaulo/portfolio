@@ -25,14 +25,15 @@ section#main {
   }
 }
 
-#wrapper {
+#wrapper1 {
   display: flex;
   justify-content: flex-end;
   height: 100%;
   width: 100%;
-}
-canvas {
-  z-index: -1;
+
+  canvas {
+    z-index: -1;
+  }
 }
 
 // #main-title {
@@ -166,7 +167,7 @@ h1#name {
     font-size: 2rem;
   }
 
-  canvas {
+  #wrapper1 canvas {
     position: relative;
     left: 100px;
   }
@@ -177,7 +178,7 @@ h1#name {
     font-size: 1.5rem;
   }
 
-  canvas {
+  #wrapper1 canvas {
     position: relative;
     left: 100px;
 
@@ -185,7 +186,7 @@ h1#name {
 }
 
 @media (max-width: 390px) {
-  canvas {
+  #wrapper1 canvas {
     left: 0px;
   }
 }

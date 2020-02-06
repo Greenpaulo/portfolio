@@ -74,9 +74,14 @@
 
 // Spiral
 
-(function () {
+const wrapper1 = document.getElementById('wrapper1');
+const wrapper2 = document.getElementById('wrapper2');
+
+function spinner (wrapperEl, flag) {
   'use strict';
-  let wrapper, canvas, ctx, width, height,
+  // let wrapper, canvas, ctx, width, height,
+  let wrapper =  wrapperEl;
+  let canvas, ctx, width, height,
     Tau = Math.PI * 2, PI180 = Math.PI / 180,
     systems = [];
 
@@ -143,8 +148,8 @@
   }
 
   /* init() */
-  function init() {
-    wrapper = document.querySelector('#wrapper');
+  function init(wrapper) {
+    // wrapper = document.querySelector('#wrapper');
     canvas = createCanvas('canvas', width, height);
     wrapper.appendChild(canvas);
     ctx = canvas.getContext('2d');
@@ -158,16 +163,29 @@
     system1.y = height * .5;
     system1.addBody({ id: 'sun', diameter: 5, degrees: 0, speed: 0, colour: '#FDFE1D', orbitalRadius: 0, parentBody: null });
     for (let loop = 30, i = 0; i < loop; i += 1) {
-      system1.addBody({
-        id: 'ball' + i,
-        diameter: 5,
-        degrees: 0,
-        // speed: 2 + (loop * 0.15) - (i * 0.2),
-        speed: (2 + (loop * 0.15) - (i * 0.2))/2,
-        colour: 'hsla(' + (i * (360 / loop)) + ',50%,50%,1)',
-        orbitalRadius: 11 * (i + 1),
-        parentBody: 'sun'
-      });
+      if (flag) {
+        system1.addBody({
+          id: 'ball' + i,
+          diameter: 5,
+          degrees: 0,
+          speed: 2 + (loop * 0.15) - (i * 0.2),
+          // speed: (2 + (loop * 0.15) - (i * 0.2)) / 2,
+          colour: 'hsla(' + (i * (360 / loop)-200) + ',50%,50%,1)',
+          orbitalRadius: 11 * (i + 1),
+          parentBody: 'sun'
+        });
+      }else{
+        system1.addBody({
+          id: 'ball' + i,
+          diameter: 5,
+          degrees: 0,
+          speed: 2 + (loop * 0.15) - (i * 0.2),
+          // speed: (2 + (loop * 0.15) - (i * 0.2))/2,
+          colour: 'hsla(' + (i * (360 / loop)) + ',50%,50%,1)',
+          orbitalRadius: 11 * (i + 1),
+          parentBody: 'sun'
+        });
+      }
     }
   }
 
@@ -240,7 +258,12 @@
       //   width = window.innerWidth;
     }
 
-    canvas.width = width/3;
+    console.log(flag);
+    if (flag){
+      canvas.width = width;
+    } else {
+      canvas.width = width/3;
+    }
 
 
     // switch (true) {
@@ -327,10 +350,15 @@
     draw();
     requestAnimationFrame(animate);
   }
-  init();
+
+  console.log(wrapper);
+  init(wrapper);
   animate();
 
-}());
+};
+
+spinner(wrapper1, false);
+spinner(wrapper2, true);
 
 
 
