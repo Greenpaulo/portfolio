@@ -6,9 +6,11 @@
 @import 'portfolio';
 @import 'skills';
 @import 'contact';
+@import 'footer';
 
 :root {
-  --primary-color: rgb(5, 5, 143);
+  --primary-color: #f3dafd;
+  --flip-card-color: rgb(5, 5, 143);
 }
 
 * {

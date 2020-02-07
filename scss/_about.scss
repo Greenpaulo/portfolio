@@ -1,5 +1,6 @@
 section#about {
-  border-top: 1px solid black;
+  // border-top: 1px solid black;
+  background: var(--primary-color);
 }
 
 #about-content {
@@ -20,6 +21,7 @@ section#about {
   #info {
     p {
       margin-bottom: 1rem;
+      font-weight: 500;
     }
   }
 }

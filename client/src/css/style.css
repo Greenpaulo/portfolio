@@ -145,7 +145,7 @@ h1#name {
 }
 
 section#about {
-  border-top: 1px solid black;
+  background: var(--primary-color);
 }
 
 #about-content {
@@ -168,6 +168,7 @@ section#about {
 
 #about-content #info p {
   margin-bottom: 1rem;
+  font-weight: 500;
 }
 
 :root {
@@ -326,7 +327,6 @@ section#about {
 
 section#portfolio {
   padding-bottom: 5rem;
-  border-top: 1px solid black;
 }
 
 section#portfolio #projects {
@@ -408,11 +408,81 @@ section#portfolio #projects img[src="imgs/bootstrap.png"] {
 }
 
 section#skills {
-  border-top: 1px solid black;
+  background: var(--primary-color);
+  height: 800px;
 }
 
-section#contact {
+section#skills h2.section-heading {
+  margin-bottom: 4rem;
+}
+
+#skills-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-top: 1px solid black;
+  padding: 5rem;
+  height: 500px;
+  -webkit-box-shadow: 6px 10px 22px -12px black;
+          box-shadow: 6px 10px 22px -12px black;
+  position: relative;
+}
+
+#skills-content > h3 {
+  font-size: 1.8rem;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#skills-content #col-1 {
+  margin: 2rem 2rem 2rem 8rem;
+}
+
+#skills-content #col-2 {
+  margin: 2rem;
+}
+
+#skills-content #col-1, #skills-content #col-2 {
+  position: relative;
+  width: 30vw;
+}
+
+#skills-content #col-1 > h3, #skills-content #col-2 > h3 {
+  margin: 2rem;
+  font-size: 1.5rem;
+}
+
+#skills-content #col-1 li, #skills-content #col-2 li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2.2rem;
+  margin-left: 2rem;
+  font-size: 1.3rem;
+}
+
+#skills-content #col-1 li .small-text, #skills-content #col-2 li .small-text {
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+#skills-content #col-1 img, #skills-content #col-2 img {
+  max-height: 70px;
+  margin-right: 0.6rem;
+}
+
+#skills-content #col-1 > div, #skills-content #col-2 > div {
+  position: absolute;
+  width: 100%;
 }
 
 #wrapper2 {
@@ -433,7 +503,8 @@ section#contact {
 }
 
 :root {
-  --primary-color: rgb(5, 5, 143);
+  --primary-color: #f3dafd;
+  --flip-card-color: rgb(5, 5, 143);
 }
 
 * {

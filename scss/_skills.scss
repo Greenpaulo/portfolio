@@ -1,3 +1,74 @@
 section#skills {
+  // border-top: 1px solid black;
+  background: var(--primary-color);
+  height: 800px;
+
+  h2.section-heading {
+    margin-bottom: 4rem;
+  }
+
+}
+
+#skills-content {
+  display: flex;
+  justify-content: center;
   border-top: 1px solid black;
+  // border-bottom: 1px solid black;
+  padding: 5rem;
+  height: 500px;
+  box-shadow: 6px 10px 22px -12px rgba(0,0,0,1);
+  position: relative;
+
+  & > h3 {
+    font-size: 1.8rem;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    // Centre text relative to its own bounding box
+    transform: translate(-50%, -50%);
+  }
+
+  #col-1 {
+    margin: 2rem 2rem 2rem 8rem;
+  }
+
+  #col-2 {
+    margin: 2rem;
+  }
+
+  #col-1, #col-2 {
+    position: relative;
+    width: 30vw;
+
+    & > h3 {
+      margin: 2rem;
+      font-size: 1.5rem;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2.2rem;
+      margin-left: 2rem;
+      // margin: 2rem;
+      font-size: 1.3rem;
+
+      .small-text {
+        font-size: 1rem;
+        margin-left: 1rem;
+      }
+    }
+
+    img {
+      max-height: 70px;
+      margin-right: 0.6rem;
+    }
+
+    & > div {
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  
 }
