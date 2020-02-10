@@ -1,7 +1,7 @@
 section#skills {
   // border-top: 1px solid black;
   background: var(--primary-color);
-  height: 800px;
+  height: 900px;
 
   h2.section-heading {
     margin-bottom: 4rem;
@@ -12,15 +12,25 @@ section#skills {
 #skills-content {
   display: flex;
   justify-content: center;
-  border-top: 1px solid black;
-  // border-bottom: 1px solid black;
+  height: 600px;
   padding: 5rem;
-  height: 500px;
-  box-shadow: 6px 10px 22px -12px rgba(0,0,0,1);
+  // border: 1px solid black;
   position: relative;
+  background: #f4ebeb;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.135),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.194),
+  0 12.5px 10px rgba(0, 0, 0, 0.24),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.286),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.345),
+  0 100px 80px rgba(0, 0, 0, 0.48)
+;
+
+
+  
 
   & > h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     position: absolute;
     top: 10%;
     left: 50%;
@@ -29,11 +39,11 @@ section#skills {
   }
 
   #col-1 {
-    margin: 2rem 2rem 2rem 8rem;
+    margin: 3rem 2rem 2rem 8rem;
   }
 
   #col-2 {
-    margin: 2rem;
+    margin: 3rem 2rem 2rem 2rem;
   }
 
   #col-1, #col-2 {
@@ -41,7 +51,7 @@ section#skills {
     width: 30vw;
 
     & > h3 {
-      margin: 2rem;
+      margin: 2.5rem;
       font-size: 1.5rem;
     }
 

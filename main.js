@@ -426,38 +426,40 @@ chart.render();
 
 // GSAP
 
+const staggerLength = 0.2;
+
 // Create new timeline
 let tl = gsap.timeline({repeat: -1});
 
 // Languages
-tl.from('#title1', {y: -50, opacity: 0, duration: 1, ease: "power1.in"})
-  .from('.lang-col-1', {x: -100, opacity: 0, stagger: 0.2, ease: "power1.in"})
-  .from('.lang-col-2', {x: 100, opacity: 0, stagger: 0.2, ease: "power1.in"})
-  .to('.lang-col-1', {x: -100, opacity: 0, stagger: 0.2, ease: "power1.in", delay: 3})
-  .to('.lang-col-2', {x: 100, opacity: 0, stagger: 0.2, ease: "power1.in"})
+tl.from('#title1', { opacity: 0, duration: 1, ease: "bounce.out", delay: 1})
+  .from('.lang-col-1', {x: -150, opacity: 0, stagger: staggerLength, ease: "power1.in"})
+  .from('.lang-col-2', { x: 150, opacity: 0, stagger: staggerLength, ease: "power1.in"})
+  .to('.lang-col-1', { x: -150, opacity: 0, stagger: staggerLength, ease: "power1.in", delay: 5})
+  .to('.lang-col-2', {x: 150, opacity: 0, stagger: staggerLength, ease: "power1.in"})
   .to('#title1', { opacity: 0, duration: 1, ease: "power1.in"})
   
 // Frameworks
-tl.from('#title2', {y: -50, opacity: 0, duration: 1, ease: "power1.in"})
+tl.from('#title2', { opacity: 0, duration: 1, ease: "bounce.out", delay: 1})
   .from('.frame-col-1', {x: -100, opacity: 0, stagger: 0.2, ease: "power1.in"})
   .from('.frame-col-2', {x: 100, opacity: 0, stagger: 0.2, ease: "power1.in"})
-  .to('.frame-col-1', { x: -100, opacity: 0, stagger: 0.2, ease: "power1.in", delay: 3})
+  .to('.frame-col-1', { x: -100, opacity: 0, stagger: 0.2, ease: "power1.in", delay: 5})
   .to('.frame-col-2', { x: 100, opacity: 0, stagger: 0.2, ease: "power1.in"})
   .to('#title2', { opacity: 0, duration: 1, ease: "power1.in"})
 
 // Databases 
-tl.from('#title3', {y: -50, opacity: 0, duration: 1, ease: "power1.in"})
+tl.from('#title3', { opacity: 0, duration: 1, ease: "bounce.out", delay: 1})
   .from('.db-col-1', {x: -100, opacity: 0, stagger: 0.2, ease: "power1.in"})
   .from('.db-col-2', {x: 100, opacity: 0, stagger: 0.2, ease: "power1.in"})
-  .to('.db-col-1', { x: -100, opacity: 0, stagger: 0.2, ease: "power1.in", delay: 3})
+  .to('.db-col-1', { x: -100, opacity: 0, stagger: 0.2, ease: "power1.in", delay: 5})
   .to('.db-col-2', { x: 100, opacity: 0, stagger: 0.2, ease: "power1.in"})
   .to('#title3', { opacity: 0, duration: 1, ease: "power1.in"})
 
 // Libraries  
-tl.from('#title4', {y: -50, opacity: 0, duration: 1, ease: "power1.in"})
+tl.from('#title4', { opacity: 0, duration: 1, ease: "bounce.out", delay: 1})
   .from('.lib-col-1', {x: -100, opacity: 0, stagger: 0.2, ease: "power1.in"})
   .from('.lib-col-2', {x: 100, opacity: 0, stagger: 0.2, ease: "power1.in"})
-  .to('.lib-col-1', { x: -100, opacity: 0, stagger: 0.2, ease: "power1.in", delay: 3})
+  .to('.lib-col-1', { x: -100, opacity: 0, stagger: 0.2, ease: "power1.in", delay: 5})
   .to('.lib-col-2', { x: 100, opacity: 0, stagger: 0.2, ease: "power1.in"})
   .to('#title4', { opacity: 0, duration: 1, ease: "power1.in"})
 
