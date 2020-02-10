@@ -42,7 +42,7 @@ section#main {
   display: grid;
   -ms-grid-columns: 2fr 1fr;
       grid-template-columns: 2fr 1fr;
-  height: 85vh;
+  height: 91vh;
 }
 
 #main-info {
