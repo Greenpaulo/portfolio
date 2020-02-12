@@ -553,8 +553,9 @@ textarea {
 button {
   font-size: 1.2rem;
   padding: 1rem;
-  width: 100%;
-  margin: auto;
+  display: block;
+  width: 50%;
+  margin: 1rem auto;
   border-radius: 5px;
   background-color: var(--primary-color);
   border: none;

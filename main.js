@@ -409,33 +409,37 @@ let tl = gsap.timeline({repeat: -1});
 tl.from('#title1', { opacity: 0, duration: 1, ease: "bounce.out", delay: 1})
   .from('.lang-col-1', {x: -150, opacity: 0, stagger: sl, ease: "power1.in"})
   .from('.lang-col-2', { x: 150, opacity: 0, stagger: sl, ease: "power1.in"})
-  .to('.lang-col-1', { x: -150, opacity: 0, stagger: sl, ease: "power1.in", delay: 5})
-  .to('.lang-col-2', {x: 150, opacity: 0, stagger: sl, ease: "power1.in"})
-  .to('#title1', { opacity: 0, duration: 1, ease: "power1.in"})
+  .addLabel("fade1", "+=5")
+  .to('.lang-col-1', { x: -150, opacity: 0, stagger: sl, ease: "power1.in" }, "fade1")
+  .to('.lang-col-2', { x: 150, opacity: 0, stagger: sl, ease: "power1.in" }, "fade1")
+  .to('#title1', { opacity: 0, duration: 1, ease: "power1.in" }, "fade1")
   
 // Frameworks
 tl.from('#title2', { opacity: 0, duration: 1, ease: "bounce.out", delay: 1})
   .from('.frame-col-1', {x: -100, opacity: 0, stagger: 0.2, ease: "power1.in"})
   .from('.frame-col-2', {x: 100, opacity: 0, stagger: 0.2, ease: "power1.in"})
-  .to('.frame-col-1', { x: -100, opacity: 0, stagger: 0.2, ease: "power1.in", delay: 5})
-  .to('.frame-col-2', { x: 100, opacity: 0, stagger: 0.2, ease: "power1.in"})
-  .to('#title2', { opacity: 0, duration: 1, ease: "power1.in"})
+  .addLabel("fade2", "+=5")
+  .to('.frame-col-1', { x: -100, opacity: 0, stagger: 0.2, ease: "power1.in"}, "fade2")
+  .to('.frame-col-2', { x: 100, opacity: 0, stagger: 0.2, ease: "power1.in" }, "fade2")
+  .to('#title2', { opacity: 0, duration: 1, ease: "power1.in" }, "fade2")
 
 // Databases 
 tl.from('#title3', { opacity: 0, duration: 1, ease: "bounce.out", delay: 1})
   .from('.db-col-1', {x: -100, opacity: 0, stagger: 0.2, ease: "power1.in"})
   .from('.db-col-2', {x: 100, opacity: 0, stagger: 0.2, ease: "power1.in"})
-  .to('.db-col-1', { x: -100, opacity: 0, stagger: 0.2, ease: "power1.in", delay: 5})
-  .to('.db-col-2', { x: 100, opacity: 0, stagger: 0.2, ease: "power1.in"})
-  .to('#title3', { opacity: 0, duration: 1, ease: "power1.in"})
+  .addLabel("fade3", "+=5")
+  .to('.db-col-1', { x: -100, opacity: 0, stagger: 0.2, ease: "power1.in" }, "fade3")
+  .to('.db-col-2', { x: 100, opacity: 0, stagger: 0.2, ease: "power1.in" }, "fade3")
+  .to('#title3', { opacity: 0, duration: 1, ease: "power1.in" }, "fade3")
 
 // Libraries  
 tl.from('#title4', { opacity: 0, duration: 1, ease: "bounce.out", delay: 1})
   .from('.lib-col-1', {x: -100, opacity: 0, stagger: 0.2, ease: "power1.in"})
   .from('.lib-col-2', {x: 100, opacity: 0, stagger: 0.2, ease: "power1.in"})
-  .to('.lib-col-1', { x: -100, opacity: 0, stagger: 0.2, ease: "power1.in", delay: 5})
-  .to('.lib-col-2', { x: 100, opacity: 0, stagger: 0.2, ease: "power1.in"})
-  .to('#title4', { opacity: 0, duration: 1, ease: "power1.in"})
+  .addLabel("fade4", "+=5")
+  .to('.lib-col-1', { x: -100, opacity: 0, stagger: 0.2, ease: "power1.in" }, "fade4")
+  .to('.lib-col-2', { x: 100, opacity: 0, stagger: 0.2, ease: "power1.in" }, "fade4")
+  .to('#title4', { opacity: 0, duration: 1, ease: "power1.in" }, "fade4")
 
 
 
