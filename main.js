@@ -74,14 +74,9 @@
 
 // Spiral
 
-const wrapper1 = document.getElementById('wrapper1');
-const wrapper2 = document.getElementById('wrapper2');
-
-function spinner (wrapperEl, flag) {
+(function () {
   'use strict';
-  // let wrapper, canvas, ctx, width, height,
-  let wrapper =  wrapperEl;
-  let canvas, ctx, width, height,
+  let wrapper, canvas, ctx, width, height,
     Tau = Math.PI * 2, PI180 = Math.PI / 180,
     systems = [];
 
@@ -148,8 +143,8 @@ function spinner (wrapperEl, flag) {
   }
 
   /* init() */
-  function init(wrapper) {
-    // wrapper = document.querySelector('#wrapper');
+  function init() {
+    wrapper = document.querySelector('#wrapper');
     canvas = createCanvas('canvas', width, height);
     wrapper.appendChild(canvas);
     ctx = canvas.getContext('2d');
@@ -163,29 +158,16 @@ function spinner (wrapperEl, flag) {
     system1.y = height * .5;
     system1.addBody({ id: 'sun', diameter: 5, degrees: 0, speed: 0, colour: '#FDFE1D', orbitalRadius: 0, parentBody: null });
     for (let loop = 30, i = 0; i < loop; i += 1) {
-      if (flag) {
-        system1.addBody({
-          id: 'ball' + i,
-          diameter: 5,
-          degrees: 0,
-          speed: 2 + (loop * 0.15) - (i * 0.2),
-          // speed: (2 + (loop * 0.15) - (i * 0.2)) / 2,
-          colour: 'hsla(' + (i * (360 / loop)-200) + ',50%,50%,1)',
-          orbitalRadius: 11 * (i + 1),
-          parentBody: 'sun'
-        });
-      }else{
-        system1.addBody({
-          id: 'ball' + i,
-          diameter: 5,
-          degrees: 0,
-          speed: 2 + (loop * 0.15) - (i * 0.2),
-          // speed: (2 + (loop * 0.15) - (i * 0.2))/2,
-          colour: 'hsla(' + (i * (360 / loop)) + ',50%,50%,1)',
-          orbitalRadius: 11 * (i + 1),
-          parentBody: 'sun'
-        });
-      }
+      system1.addBody({
+        id: 'ball' + i,
+        diameter: 5,
+        degrees: 0,
+        speed: 2 + (loop * 0.15) - (i * 0.2),
+        // speed: (2 + (loop * 0.15) - (i * 0.2)) / 5,
+        colour: 'hsla(' + (i * (360 / loop)) + ',50%,50%,1)',
+        orbitalRadius: 11 * (i + 1),
+        parentBody: 'sun'
+      });
     }
   }
 
@@ -220,50 +202,46 @@ function spinner (wrapperEl, flag) {
       // Large Desktop Dislay
       case (window.innerWidth >= 1400):
         width = window.innerWidth / 2;
-        console.log('case1')
+        // console.log('case1')
         break;
       // Desktop
       case (window.innerWidth > 1024 && window.innerWidth < 1400):
         width = window.innerWidth / 1.5;
-        console.log('case2')
+        // console.log('case2')
         break;
       // Ipad Pro & Ipad
       case (window.innerWidth <= 1024 && window.innerWidth > 675):
         width = window.innerWidth;
-        console.log('case3')
+        // console.log('case3')
         break;
       case (window.innerWidth <= 675 && window.innerWidth > 559):
         width = window.innerWidth * 1.2;
-        console.log('case4')
+        // console.log('case4')
         break;
       case (window.innerWidth <= 559 && window.innerWidth > 512):
         width = window.innerWidth * 1.4;
-        console.log('case4')
+        // console.log('case4')
         break;
       case (window.innerWidth <= 512 && window.innerWidth > 414):
         width = window.innerWidth * 1.6;
-        console.log('case4')
+        // console.log('case4')
         break;
       // Pixel2 XL,iphone 6/7/8 plus, iphoneX
       case (window.innerWidth <= 414 && window.innerWidth > 380):
         width = window.innerWidth * 1.8;
-        console.log('case5');
+        // console.log('case5');
         break;
       // Small mobile e.g. iphone5
       case (window.innerWidth <= 380):
         width = window.innerWidth * 2.5;
-        console.log('case6');
+        // console.log('case6');
         break;
       // default:
       //   width = window.innerWidth;
     }
 
-    console.log(flag);
-    if (flag){
-      canvas.width = width;
-    } else {
+      // canvas.width = width;
       canvas.width = width/3;
-    }
 
 
     // switch (true) {
@@ -299,8 +277,8 @@ function spinner (wrapperEl, flag) {
     //     case (window.innerWidth < 768):
     //       break;
     //   }
-      console.log('width', window.innerWidth);
-      console.log('height', window.innerHeight);
+      // console.log('width', window.innerWidth);
+      // console.log('height', window.innerHeight);
       // console.log('calculated height', height);
       // console.log('canvas width', canvas.width);
       // console.log('canvas height', canvas.height);
@@ -351,15 +329,10 @@ function spinner (wrapperEl, flag) {
     requestAnimationFrame(animate);
   }
 
-  console.log(wrapper);
-  init(wrapper);
+  init();
   animate();
 
-};
-
-spinner(wrapper1, false);
-spinner(wrapper2, true);
-
+}());
 
 
 
@@ -426,17 +399,18 @@ chart.render();
 
 // GSAP
 
-const staggerLength = 0.2;
+// Stagger Length
+const sl = 0.2;
 
 // Create new timeline
 let tl = gsap.timeline({repeat: -1});
 
 // Languages
 tl.from('#title1', { opacity: 0, duration: 1, ease: "bounce.out", delay: 1})
-  .from('.lang-col-1', {x: -150, opacity: 0, stagger: staggerLength, ease: "power1.in"})
-  .from('.lang-col-2', { x: 150, opacity: 0, stagger: staggerLength, ease: "power1.in"})
-  .to('.lang-col-1', { x: -150, opacity: 0, stagger: staggerLength, ease: "power1.in", delay: 5})
-  .to('.lang-col-2', {x: 150, opacity: 0, stagger: staggerLength, ease: "power1.in"})
+  .from('.lang-col-1', {x: -150, opacity: 0, stagger: sl, ease: "power1.in"})
+  .from('.lang-col-2', { x: 150, opacity: 0, stagger: sl, ease: "power1.in"})
+  .to('.lang-col-1', { x: -150, opacity: 0, stagger: sl, ease: "power1.in", delay: 5})
+  .to('.lang-col-2', {x: 150, opacity: 0, stagger: sl, ease: "power1.in"})
   .to('#title1', { opacity: 0, duration: 1, ease: "power1.in"})
   
 // Frameworks

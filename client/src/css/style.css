@@ -168,6 +168,7 @@ section#about {
 
 #about-content #info p {
   margin-bottom: 1rem;
+  font-size: 1.2em;
   font-weight: 500;
 }
 
@@ -485,21 +486,79 @@ section#skills h2.section-heading {
   width: 100%;
 }
 
-#wrapper2 {
+section#contact {
+  margin-bottom: 10rem;
+}
+
+section#contact .section-heading {
+  margin-bottom: 2.8rem;
+}
+
+form {
+  width: 100%;
+  margin: auto;
+}
+
+#contact-info {
+  width: 40%;
+}
+
+#inputs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+input[type="text"], input[type="email"], textarea {
+  border: 1.5px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 1.2rem;
   width: 100%;
 }
 
-#wrapper2 canvas {
-  z-index: -1;
-  position: relative;
-  right: 650px;
+input[type="text"], input[type="email"] {
+  margin-bottom: 1.5rem;
+  padding: 0.7rem;
+}
+
+#msg {
+  width: 50%;
+}
+
+textarea {
+  font-family: 'Raleway', sans-serif;
+  padding: 0.7rem;
+}
+
+button {
+  font-size: 1.2rem;
+  padding: 1rem;
+  width: 100%;
+  margin: auto;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  border: none;
+  cursor: pointer;
 }
 
 :root {
@@ -514,6 +573,8 @@ section#skills h2.section-heading {
 
 html, body {
   overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {

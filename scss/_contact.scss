@@ -1,16 +1,71 @@
 section#contact {
   // border-top: 1px solid black;
+  .section-heading {
+    margin-bottom: 2.8rem;
+  }
+
+  margin-bottom: 10rem;   // TEMP *****************************************
 }
 
-#wrapper2 {
-  display: flex;
-  justify-content: flex-start;
-  height: 100%;
+form {
   width: 100%;
+  // margin: 0 auto 2rem auto;
+  margin: auto;
+}
 
-  canvas {
-    z-index: -1;
-    position: relative;
-    right: 650px;
-  }
+#contact-info {
+  width: 40%;
+  // margin-right: 3rem;
+}
+
+#inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+
+}
+
+input[type="text"], input[type="email"], textarea {
+  border: 1.5px solid var(--primary-color); 
+  border-radius: 5px;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+input[type="text"], input[type="email"] {
+  margin-bottom: 1.5rem;
+  padding: 0.7rem;
+}
+
+#msg {
+  width: 50%;
+}
+
+textarea {
+  font-family: 'Raleway', sans-serif;
+  padding: 0.7rem;
+}
+
+button {
+  font-size: 1.2rem;
+  padding: 1rem;
+  width: 100%;
+  margin: auto;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+  // margin-top: 1rem;
 }
