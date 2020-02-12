@@ -18,11 +18,20 @@ section#main {
   }
 
   #links {
-    margin-top: 1.8rem;
+    margin: 1.8rem 0;
+
     i {
       margin-right: 2rem;
     }
   }
+}
+
+.separator {
+  width: 80px;
+  height: 8px;
+  margin-top: 3rem;
+  display: block;
+  background-color: var(--primary-color);
 }
 
 #wrapper1 {

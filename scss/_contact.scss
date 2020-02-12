@@ -4,7 +4,11 @@ section#contact {
     margin-bottom: 2.8rem;
   }
 
-  margin-bottom: 10rem;   // TEMP *****************************************
+  margin-bottom: 2rem;
+
+  #wrapper2 {
+    display: none;
+  }
 }
 
 form {
@@ -40,13 +44,13 @@ label {
 input[type="text"], input[type="email"], textarea {
   border: 1.5px solid var(--primary-color); 
   border-radius: 5px;
-  font-size: 1.2rem;
   width: 100%;
 }
 
 input[type="text"], input[type="email"] {
   margin-bottom: 1.5rem;
   padding: 0.7rem;
+  font-size: 1.2rem;
 }
 
 #msg {
@@ -55,6 +59,7 @@ input[type="text"], input[type="email"] {
 
 textarea {
   font-family: 'Raleway', sans-serif;
+  font-size: 1.1rem;
   padding: 0.7rem;
 }
 
