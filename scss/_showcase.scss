@@ -1,7 +1,12 @@
 section#main {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  // margin-top: 79px;
   height: 91vh;
+
+  &.container {
+    text-align: left;
+  }
 }
 
 #main-info {
@@ -20,8 +25,19 @@ section#main {
   #links {
     margin: 1.8rem 0;
 
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
     i {
       margin-right: 2rem;
+      cursor: pointer;
+      transition: color 0.15s ease-in-out;
+
+      &:hover {
+        color: var(--secondary-color);
+      }
     }
   }
 }
@@ -31,7 +47,7 @@ section#main {
   height: 8px;
   margin-top: 3rem;
   display: block;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
 #wrapper1 {

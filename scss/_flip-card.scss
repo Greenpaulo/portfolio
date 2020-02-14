@@ -131,11 +131,12 @@
     font-size: 1.2rem;
 
     &.app-btn {
-      background: green;
+      background: var(--primary-color);
+      color: black;
     }
 
     &.code-btn {
-      background: purple;
+      background: var(--secondary-color);
     }
   }
 

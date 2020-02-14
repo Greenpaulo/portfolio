@@ -10,15 +10,15 @@
 </head>
 <body>
 
-  <header id="navbar" class="container">
-    <div id="header-content">
-      <h3>Paul Bingham</h3>
+  <header id="navbar">
+    <div id="header-content" class="container">
+      <h3 id="logo"><a href="#main">Paul Bingham</a></h3>
       <nav>
         <ul id="nav-menu">
-          <li class="nav-link">About</li>
-          <li class="nav-link">Portfolio</li>
-          <li class="nav-link">Skills</li>
-          <li class="nav-link">Contact</li>
+          <li class="nav-link"><a href="#about">About</a></li>
+          <li class="nav-link"><a href="#portfolio">Portfolio</a></li>
+          <li class="nav-link"><a href="#skills">Skills</a></li>
+          <li class="nav-link"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -31,10 +31,10 @@
         <h1>Developer</h1>
       </div>
       <div id="links">
-        <i class="fab fa-github fa-2x" aria-hidden="true"></i>
-        <i class="fab fa-facebook fa-2x" aria-hidden="true"></i>
-        <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
-        <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+        <a href="https://github.com/Greenpaulo"><i class="fab fa-github fa-2x" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/paul.bingham.71"><i class="fab fa-facebook fa-2x" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/greenpaulo79/"><i class="fab fa-instagram fa-2x" aria-hidden="true"></i></a>
+        <a href="www.linkedin.com/in/paul-b-8b1735a"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i></a>
       </div>
       <span class="separator"></span>
     </div>
@@ -135,7 +135,7 @@
           <li><img src="imgs/laravel.png" alt="laravel.js logo">Laravel</li>
           <li><img src="imgs/sass.png" alt="sass logo">Sass</li>
           <li><img src="imgs/postgreSQL.png" alt="PostgreSQL logo">PostgreSQL</li>
-          <li><img src="imgs/gsap.jpg" alt="gsap logo">GSAP</li>
+          <li><img src="imgs/gsap.png" alt="gsap logo">GSAP</li>
         </ul>
       </div>
     </div>
@@ -147,9 +147,9 @@
         <!-- <div id="chart"></div> -->
       <div id="skills-content">
         <h3 id="title1">Languages</h3>
-        <h3 id="title2">Frameworks</h3>
-        <h3 id="title3">Databases</h3>
-        <h3 id="title4">Libraries</h3>
+        <h3 id="title2">Frameworks/Runtimes</h3>
+        <h3 id="title3">Databases/Libraries</h3>
+        <!-- <h3 id="title4">Libraries</h3> -->
         
         <div id="col-1">
           <div class="languages">
@@ -166,16 +166,10 @@
             <li class="frame-col-1"><img src="imgs/laravel.png" alt="laravel.js logo"><b>Laravel</b><span class="small-text"> 5 mths exp.</span></li>
           </div>
           
-          <div class="databases">
+          <div class="db-lib">
             <li class="db-col-1"><img src="imgs/mongodb.png" alt="mongodb.js logo"><b>MongoDB</b><span class="small-text"> 7 mths exp.</span></li>
             <li class="db-col-1"><img src="imgs/mySQL.png" alt="mySQL logo"><b>MySQL</b><span class="small-text"> 5 mths exp.</span></li>
             <li class="db-col-1"><img src="imgs/postgreSQL.png" alt="PostgreSQL logo"><b>PostgreSQL</b><span class="small-text"> 2 mths exp.</span></li>
-          </div>
-
-          <div class="libraries">
-            <li class="lib-col-1"><img src="imgs/redux.png" alt="redux.js logo"><b>Redux</b><span class="small-text"> 7 mths exp.</span></li>
-            <li class="lib-col-1"><img src="imgs/bootstrap.png" alt="bootstrap logo"><b>Bootstrap</b><span class="small-text"> 1 yr exp.</span></li>
-            <li class="lib-col-1"><img src="imgs/gsap.jpg" alt="gsap logo"><b>GSAP</b><span class="small-text"> 4 mths exp.</span></li>
           </div>
           
         </div>
@@ -187,10 +181,17 @@
             <li class="lang-col-2"><img src="imgs/sass.png" alt="sass logo"><b>Sass</b><span class="small-text"> 1 yr exp.</span></li>
           </div>
           <div class="frameworks">
+            <li class="frame-col-2"><img src="imgs/node.png" alt="node.js logo"><b>Node.js</b><span class="small-text"> 7 mths exp.</span></li>
             <li class="frame-col-2"><img src="imgs/express.png" alt="express.js logo"><b>Express</b><span class="small-text"> 7 mths exp.</span></li>
+            <li class="frame-col-2"><img src="imgs/bootstrap.png" alt="bootstrap logo"><b>Bootstrap</b><span class="small-text"> 1 yr
+                exp.</span></li>
           </div>
 
-          <div class="libraries">
+          <div class="db-lib">
+            <li class="db-col-2"><img src="imgs/redux.png" alt="redux.js logo"><b>Redux</b><span class="small-text"> 7 mths
+                exp.</span></li>
+            <li class="db-col-2"><img src="imgs/gsap.png" alt="gsap logo"><b>GSAP</b><span class="small-text"> 4 mths exp.</span>
+            </li>
           </div>
         </div>
       </div>
@@ -239,7 +240,6 @@
       <span>&copy; 2020 Paul Bingham. All Rights Reserved.</span>
     </div>
   </footer>
-  
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>

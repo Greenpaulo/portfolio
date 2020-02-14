@@ -1,69 +1,35 @@
-// class TypeWriter {
-//   constructor(txtElement, words, wait = 3000) {
-//     this.txtElement = txtElement;
-//     this.words = words;
-//     this.txt = '';
-//     this.wordIndex = 0;
-//     this.wait = parseInt(wait, 10);
-//     this.type();
-//     this.isDeleting = false;
-//   }
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
 
-//   type() {
-//     // Current index of word
-//     const current = this.wordIndex % this.words.length;
-//     // Get full text of current word
-//     const fullTxt = this.words[current];
+// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//   anchor.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     var node = document.querySelector(this.getAttribute('href'));
+//     let item = node;
+//     //this is the parent container, overflow wrapper
+//     let wrp = document.querySelector('#wr-page');
+//     console.log(wrp)
+//     let count = item.offsetTop - wrp.scrollTop;
+//     wrp.scrollBy({ top: count, left: 0, behavior: 'smooth' })
+//   });
+// });
 
-//     // Check if deleting
-//     if (this.isDeleting) {
-//       // Remove char
-//       this.txt = fullTxt.substring(0, this.txt.length - 1);
-//     } else {
-//       // Add char
-//       this.txt = fullTxt.substring(0, this.txt.length + 1);
-//     }
+// Note: Requires removal of "overflow-x: hidden" on the body element in CSS
+// window.onscroll = function () { scrollFunction() };
 
-//     // Insert txt into element
-//     this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+// function scrollFunction() {
+//   if (document.body.scrollTop > 863 || document.documentElement.scrollTop > 863) {
 
-//     // Initial Type Speed
-//     let typeSpeed = 300;
-
-//     if (this.isDeleting) {
-//       typeSpeed /= 2;
-//     }
-
-//     // If word is complete
-//     if (!this.isDeleting && this.txt === fullTxt) {
-//       // Make pause at end
-//       typeSpeed = this.wait;
-//       // Set delete to true
-//       this.isDeleting = true;
-//     } else if (this.isDeleting && this.txt === '') {
-//       this.isDeleting = false;
-//       // Move to next word
-//       this.wordIndex++;
-//       // Pause before start typing
-//       typeSpeed = 500;
-//     }
-
-//     setTimeout(() => this.type(), typeSpeed);
+//     document.getElementById("navbar").style.borderBottom = "1px solid black";
+//     document.getElementById("header-content").style.borderBottom = "none";
+//     // document.getElementById("logo").style.fontSize = "25px";
+//   } else {
+//     document.getElementById("navbar").style.borderBottom = "none";
+//     document.getElementById("header-content").style.borderBottom = "1px solid black";
+//     // document.getElementById("logo").style.fontSize = "35px";
 //   }
 // }
 
 
-// // Init On DOM Load
-// document.addEventListener('DOMContentLoaded', init);
-
-// // Init App
-// function init() {
-//   const txtElement = document.querySelector('.txt-type');
-//   const words = JSON.parse(txtElement.getAttribute('data-words'));
-//   const wait = txtElement.getAttribute('data-wait');
-//   // Init TypeWriter
-//   new TypeWriter(txtElement, words, wait);
-// }
 
 
 
@@ -631,12 +597,14 @@ spinner(wrapper2, true);
 
 // Stagger Length
 const sl = 0.2;
+// Delay lenght
+const dl = 0.5;
 
 // Create new timeline
 let tl = gsap.timeline({repeat: -1});
 
 // Languages
-tl.from('#title1', { opacity: 0, duration: 1, ease: "bounce.out", delay: 1})
+tl.from('#title1', { opacity: 0, duration: 1, ease: "bounce.out", delay: dl})
   .from('.lang-col-1', {x: -150, opacity: 0, stagger: sl, ease: "power1.in"})
   .from('.lang-col-2', { x: 150, opacity: 0, stagger: sl, ease: "power1.in"})
   .addLabel("fade1", "+=5")
@@ -645,7 +613,7 @@ tl.from('#title1', { opacity: 0, duration: 1, ease: "bounce.out", delay: 1})
   .to('#title1', { opacity: 0, duration: 1, ease: "power1.in" }, "fade1")
   
 // Frameworks
-tl.from('#title2', { opacity: 0, duration: 1, ease: "bounce.out", delay: 1})
+tl.from('#title2', { opacity: 0, duration: 1, ease: "bounce.out", delay: dl})
   .from('.frame-col-1', {x: -100, opacity: 0, stagger: 0.2, ease: "power1.in"})
   .from('.frame-col-2', {x: 100, opacity: 0, stagger: 0.2, ease: "power1.in"})
   .addLabel("fade2", "+=5")
@@ -653,23 +621,23 @@ tl.from('#title2', { opacity: 0, duration: 1, ease: "bounce.out", delay: 1})
   .to('.frame-col-2', { x: 100, opacity: 0, stagger: 0.2, ease: "power1.in" }, "fade2")
   .to('#title2', { opacity: 0, duration: 1, ease: "power1.in" }, "fade2")
 
-// Databases 
-tl.from('#title3', { opacity: 0, duration: 1, ease: "bounce.out", delay: 1})
+// Databases/Libaries
+tl.from('#title3', { opacity: 0, duration: 1, ease: "bounce.out", delay: dl})
   .from('.db-col-1', {x: -100, opacity: 0, stagger: 0.2, ease: "power1.in"})
   .from('.db-col-2', {x: 100, opacity: 0, stagger: 0.2, ease: "power1.in"})
   .addLabel("fade3", "+=5")
   .to('.db-col-1', { x: -100, opacity: 0, stagger: 0.2, ease: "power1.in" }, "fade3")
   .to('.db-col-2', { x: 100, opacity: 0, stagger: 0.2, ease: "power1.in" }, "fade3")
-  .to('#title3', { opacity: 0, duration: 1, ease: "power1.in" }, "fade3")
+  .to('#title3', { opacity: 0, duration: 1, ease: "power1.in" }, "fade3");
 
-// Libraries  
-tl.from('#title4', { opacity: 0, duration: 1, ease: "bounce.out", delay: 1})
-  .from('.lib-col-1', {x: -100, opacity: 0, stagger: 0.2, ease: "power1.in"})
-  .from('.lib-col-2', {x: 100, opacity: 0, stagger: 0.2, ease: "power1.in"})
-  .addLabel("fade4", "+=5")
-  .to('.lib-col-1', { x: -100, opacity: 0, stagger: 0.2, ease: "power1.in" }, "fade4")
-  .to('.lib-col-2', { x: 100, opacity: 0, stagger: 0.2, ease: "power1.in" }, "fade4")
-  .to('#title4', { opacity: 0, duration: 1, ease: "power1.in" }, "fade4")
+// // Libraries  
+// tl.from('#title4', { opacity: 0, duration: 1, ease: "bounce.out", delay: dl})
+//   .from('.lib-col-1', {x: -100, opacity: 0, stagger: 0.2, ease: "power1.in"})
+//   .from('.lib-col-2', {x: 100, opacity: 0, stagger: 0.2, ease: "power1.in"})
+//   .addLabel("fade4", "+=5")
+//   .to('.lib-col-1', { x: -100, opacity: 0, stagger: 0.2, ease: "power1.in" }, "fade4")
+//   .to('.lib-col-2', { x: 100, opacity: 0, stagger: 0.2, ease: "power1.in" }, "fade4")
+//   .to('#title4', { opacity: 0, duration: 1, ease: "power1.in" }, "fade4")
 
 
 

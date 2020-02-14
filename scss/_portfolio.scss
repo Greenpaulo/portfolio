@@ -1,6 +1,9 @@
 section#portfolio {
   padding-bottom: 5rem;
-  // border-top: 1px solid black;
+
+  .section-heading {
+    border-color: var(--secondary-color);
+  }
   
   #projects {
     display: grid;
@@ -26,6 +29,9 @@ section#portfolio {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-auto-flow: row;
+      justify-content: space-between;
+      width: 80%;
+      margin: 2rem 0 0 6rem;
     }
 
     // Tech logos
