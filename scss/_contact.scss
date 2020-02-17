@@ -26,6 +26,7 @@ form {
 #inputs {
   display: flex;
   justify-content: space-between;
+  margin: 2rem 0;
 }
 
 .form-group {
@@ -70,14 +71,34 @@ button {
   display: block;
   width: 50%;
   margin: 1rem auto;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: var(--primary-color);
   border: none;
   cursor: pointer;
-  transition: background-color, color, 300ms ease-in-out;
+  position: relative;
+  transition: color, 300ms ease-in-out;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--secondary-color);
+    position: absolute;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 300ms ease-in-out;
+  }
 
   &:hover, &:focus {
-    background-color: var(--secondary-color);
     color: white;
+  }
+
+  &:hover::before, &:focus::before {
+    transform: scaleX(1);
   }
 }

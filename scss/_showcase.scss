@@ -58,6 +58,8 @@ section#main {
 
   canvas {
     z-index: -1;
+    position: relative;
+    left: 10px;
   }
 }
 
