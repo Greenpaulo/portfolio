@@ -38,13 +38,42 @@ header#navbar {
 
 .nav-link {
   list-style: none;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   font-weight: bold;
   font-size: 1rem;
+  position: relative;
+  margin-right: 1rem;
+  z-index: 1;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    top: 0;
+    right:0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 5px;
+    z-index: -1;
+    background-color: var(--secondary-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 200ms ease-in-out;
+  }
+
+  &:hover::before, &:focus::before {
+    transform: scaleX(1);
+  }
+
+  &:hover a, &:focus a {
+      color: white;
+    }
 
   a {
     text-decoration: none;
     color: black;
+    transition: color 200ms ease-in-out;
+ 
   }
 }
 
