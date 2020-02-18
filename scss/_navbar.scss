@@ -77,8 +77,21 @@ header#navbar {
   }
 }
 
-// @media (max-width: 1125px) {
-//   header#navbar {
-//   right: 0px;
-// }
-// }
+@media (max-width: 1024px) {
+  #header-content.container {
+    width: 100%;
+  }
+
+  #navbar h3 {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 414px) {
+  
+  #wrapper1 {
+    position: relative;
+    left: 50px;
+  }
+
+}

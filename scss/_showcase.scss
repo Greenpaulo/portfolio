@@ -126,20 +126,14 @@ h1#name {
 // Ipad pro
 @media (max-width: 1024px){
 
-  // section#main {
-  //   height: 79vh;
-  // }
+  section#main {
+    height: 80vh;
+  }
   
+  #main.container {
+    width: 100%;
+  }
   
-  // #main-info {
-  //   margin-left: 5rem;
-  //   margin-top: 15rem;
-  // }
-
-  // canvas {
-  //   position: relative;
-  //   // bottom: 30px;
-  // }
 }
 
 // @media (max-width: 1024px) and (min-height: 1350px) {
@@ -159,6 +153,10 @@ h1#name {
   
   #main-info #title h1 {
     font-size: 3rem;
+  }
+
+  #wrapper1 canvas {
+    left: 62px;
   }
 }
 
@@ -201,8 +199,20 @@ h1#name {
 }
 
 @media (max-width: 560px){
-  #main-info #title h1 {
-    font-size: 1.5rem;
+  #main-info {
+  
+    #title h1 {
+      font-size: 1.5rem;
+    }
+
+    #links {
+      font-size: 0.6rem;
+      margin: 1.3rem 0;
+    }
+  }
+
+  .separator {
+    margin-top: 2rem;
   }
 
   #wrapper1 canvas {
@@ -212,11 +222,23 @@ h1#name {
   }
 }
 
-@media (max-width: 390px) {
-  #wrapper1 canvas {
-    left: 0px;
+@media (max-width: 430px) {
+
+  #main-info {
+    width: 100%;
   }
+
+  section#main {
+  grid-template-columns: 2fr 1fr;
 }
+    
+}
+
+// @media (max-width: 390px) {
+//   #wrapper1 canvas {
+//     left: 0px;
+//   }
+// }
 
 // @media (max-width: 675px) and (min-height: 880px){
 //   canvas {

@@ -33,7 +33,7 @@
 
 
 
-// Spiral
+// Spinner
 
 const wrapper1 = document.getElementById('wrapper1');
 const wrapper2 = document.getElementById('wrapper2');
@@ -181,17 +181,14 @@ function spinner(wrapperEl, flag) {
       // Large Desktop Dislay
       case (window.innerWidth >= 1400):
         width = window.innerWidth / 2;
-        console.log('case1')
         break;
       // Desktop
       case (window.innerWidth > 1024 && window.innerWidth < 1400):
         width = window.innerWidth / 1.5;
-        console.log('case2')
         break;
       // Ipad Pro & Ipad
       case (window.innerWidth <= 1024 && window.innerWidth > 675):
         width = window.innerWidth;
-        console.log('case3')
         break;
       case (window.innerWidth <= 675 && window.innerWidth > 559):
         width = window.innerWidth * 1.2;
@@ -199,24 +196,21 @@ function spinner(wrapperEl, flag) {
         break;
       case (window.innerWidth <= 559 && window.innerWidth > 512):
         width = window.innerWidth * 1.4;
-        console.log('case4')
         break;
       case (window.innerWidth <= 512 && window.innerWidth > 414):
         width = window.innerWidth * 1.6;
-        console.log('case4')
         break;
       // Pixel2 XL,iphone 6/7/8 plus, iphoneX
       case (window.innerWidth <= 414 && window.innerWidth > 380):
+        // width = window.innerWidth * 1.8;
         width = window.innerWidth * 1.8;
-        console.log('case5');
         break;
       // Small mobile e.g. iphone5
       case (window.innerWidth <= 380):
         width = window.innerWidth * 2.5;
-        console.log('case6');
         break;
-      // default:
-      //   width = window.innerWidth;
+      default:
+        width = 0;
     }
 
     console.log(flag);
@@ -227,44 +221,7 @@ function spinner(wrapperEl, flag) {
     }
 
 
-    // switch (true) {
-    //   // Desktop/Ipad Pro/Ipad
-    //   case (window.innerWidth > 414):
-    //     canvas.width = width / 3;
-    //     break;
-    //   // // Pixel2 XL,iphone 6/7/8 plus, iphoneX
-    //   case (window.innerWidth <= 414):
-    //     canvas.width = width;
-    //     break;
-    // }
-    // console.log('before calc', window.innerHeight);
-    // console.log('rect', rect.top);
-    // height = window.innerHeight / 1.2 - rect.top - 2;
     height = window.innerHeight / 1.3;
-    // console.log('after calc', height);
-
-
-
-    // Desktop
-    // height = window.innerHeight/1.1 - rect.top - 2;
-
-    // switch (true) {
-    //     // Desktop/Ipad Pro/Ipad
-    //     case (window.innerWidth > 1024):
-    //       height = window.innerHeight / 1.3;
-    //       break;
-    //     case (window.innerWidth <= 1024 && window.innerWidth >= 768):
-    //       height = window.innerHeight / 1.3;
-    //       break;
-    //     // // Pixel2 XL,iphone 6/7/8 plus, iphoneX
-    //     case (window.innerWidth < 768):
-    //       break;
-    //   }
-    console.log('width', window.innerWidth);
-    console.log('height', window.innerHeight);
-    // console.log('calculated height', height);
-    // console.log('canvas width', canvas.width);
-    // console.log('canvas height', canvas.height);
 
     canvas.height = height;
     for (let i = 0; i < systems.length; i++) {

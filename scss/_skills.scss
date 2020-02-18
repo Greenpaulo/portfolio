@@ -77,6 +77,26 @@ section#skills {
       width: 100%;
     }
   }
+}
 
+
+@media (max-width: 1024px){
+
+  #skills-content {
+    padding: 6rem 7rem 5rem 0;
+  } 
+}
+
+@media (max-width: 768px) {
+
+  #skills-content {
   
+    #col-1 {
+      margin: 3rem 0rem 2rem 2rem;
+    }
+
+    #col-2 {
+      margin: 3rem 0rem 2rem 2rem;
+    }
+  }
 }

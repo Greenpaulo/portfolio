@@ -28,3 +28,28 @@ section#about {
     }
   }
 }
+
+
+// Ipad Pro
+@media (max-width: 1024px) {
+  
+  .container {
+    width: 90%; 
+  }
+}
+
+@media (max-width: 768px) {
+
+  #about-content {
+    display: flex;
+    flex-direction: column;
+    
+    #info {
+      margin-top: 5rem;
+    }
+  }
+
+  #about .container {
+    width: 77%;
+  }
+}

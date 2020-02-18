@@ -79,3 +79,30 @@ section#portfolio {
 #journey-card, #journey-description {
   margin-top: 2rem;
 }
+
+
+@media (max-width: 768px) {
+
+  section#portfolio #projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    justify-content: center;
+    grid-gap: 0;
+
+    & > div {
+      margin: auto;
+      margin-bottom: 5rem;
+    }
+
+    .project-info {
+      width: 80%;
+    }
+
+    #journey-description {
+      grid-row: 3 / 4;
+      margin-top: 5rem;
+    }
+
+  }
+}
