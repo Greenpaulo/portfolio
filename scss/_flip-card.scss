@@ -29,6 +29,7 @@
 }
 
 .card:hover .card-content {
+  -webkit-transform: rotateY(.5turn);
   transform: rotateY(.5turn);
 }
 
