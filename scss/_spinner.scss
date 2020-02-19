@@ -1,0 +1,45 @@
+#wrapper1 {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+
+  canvas {
+    z-index: -1;
+    position: relative;
+    left: 10px;
+  }
+}
+
+// Media queries
+@media (max-width: 875px){
+
+  #wrapper1 canvas {
+    left: 62px;
+  }
+}
+
+@media (max-width: 675px){
+  
+  #wrapper1 canvas {
+    position: relative;
+    left: 100px;
+  }
+}
+
+@media (max-width: 560px){
+  
+  #wrapper1 canvas {
+    position: relative;
+    left: 100px;
+  }
+}
+
+@media (max-width: 414px) {
+  
+  #wrapper1 {
+    position: relative;
+    left: 100px;
+  }
+
+}

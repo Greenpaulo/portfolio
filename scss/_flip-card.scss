@@ -139,6 +139,24 @@
       background: var(--secondary-color);
     }
   }
+}
 
 
+// Media queries
+@media (max-width: 450px){
+  .card {
+    width: 350px;
+  }
+}
+
+@media (max-width: 385px){
+  .card {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 320px) {
+  .card-back a {
+    font-size: 0.8rem;
+  }
 }

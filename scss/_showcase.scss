@@ -63,27 +63,6 @@ section#main {
   }
 }
 
-// #main-title {
-//   height: 50vh;
-//   width: 40vw;
-//   margin: 1rem auto;
-//   -webkit-box-shadow: 7px 6px 21px 0px rgba(0,0,0,0.23);
-//   -moz-box-shadow: 7px 6px 21px 0px rgba(0,0,0,0.23);
-//   box-shadow: 7px 6px 21px 0px rgba(0,0,0,0.23);
-//   background: url('../../../imgs/oldham.jpg') no-repeat center center / cover;
-//   /* background: rgb(46, 33, 163); */
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   text-align: center;
-// }
-
-// h1 {
-//   font-size: 4rem;
-//   font-weight: 200;
-//   color: white;
-//   margin-bottom: 1rem; 
-// }
 
 h1#name {
   margin-top: 4rem;
@@ -95,27 +74,6 @@ h1#name {
 }
 
 
-// Media queries
-// @media (max-width: 1500px){
-//   canvas {  
-//       left: 69.5vw;
-//   }
-// }
-// @media (max-width: 1400px){
-//   canvas {  
-//       left: 66.5vw;
-//   }
-// }
-// @media (max-width: 1300px){
-//   canvas {  
-//       left: 69.5vw;
-//   }
-// }
-// @media (max-width: 1200px){
-//   canvas {  
-//       left: 72.5vw;
-//   }
-// }
 
 @media (max-width: 1175px) {
   #main-info {
@@ -132,15 +90,8 @@ h1#name {
   
   #main.container {
     width: 100%;
-  }
-  
+  } 
 }
-
-// @media (max-width: 1024px) and (min-height: 1350px) {
-//   canvas {
-//     top: 6vh;
-//   }
-// }
 
 @media (max-width: 980px){
   
@@ -167,16 +118,6 @@ h1#name {
   }
 }
 
-
-// // ipad
-// @media (max-width: 768px){
-//   canvas {
-//     position: absolute;
-//     top: 10vh;
-//     left: 78.5vw;
-//   }
-// }
-
 // Large mobile width eg Iphone 6/7/8 plus, Pixel2 XL
 @media (max-width: 675px){
   #main-info {
@@ -192,9 +133,13 @@ h1#name {
     font-size: 2rem;
   }
 
+  .separator {
+    width: 50px;
+    height: 6px;
+  }
+
   #wrapper1 canvas {
-    position: relative;
-    left: 100px;
+    left: 70px;
   }
 }
 
@@ -202,7 +147,7 @@ h1#name {
   #main-info {
   
     #title h1 {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
 
     #links {
@@ -215,11 +160,10 @@ h1#name {
     margin-top: 2rem;
   }
 
-  #wrapper1 canvas {
-    position: relative;
-    left: 100px;
-
-  }
+  // #wrapper1 canvas {
+  //   position: relative;
+  //   left: 100px;
+  // }
 }
 
 @media (max-width: 430px) {
@@ -229,87 +173,42 @@ h1#name {
   }
 
   section#main {
-  grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  #wrapper1 canvas {
+    left: 20px;
+  }
+  
 }
-    
+
+@media (max-width: 400px) {
+
+  #wrapper1 canvas {
+    left: -27px;
+  }
 }
 
-// @media (max-width: 390px) {
-//   #wrapper1 canvas {
-//     left: 0px;
-//   }
-// }
 
-// @media (max-width: 675px) and (min-height: 880px){
-//   canvas {
-//     top: 9vh;
-//   }
-// }
+// Media queries heights for spinner
+@media (max-height: 823px){
 
-// @media (max-width: 573px){
-//   canvas {
-//     top: 14vh;
-//   }
-// }
+  #wrapper1 canvas {
+    bottom: 40px;
+  }
+}
 
-// @media (max-width: 559px){
-//   canvas {
-//     top: 17vh;
-//     left: 77.5vw;
-//   }
-// }
+@media (max-height: 736px){
 
-// @media (max-width: 512px){
-//   canvas {
-//     top: 17vh;
-//     left: 42.5vw;
-//   }
-// }
+  #wrapper1 canvas {
+    bottom: 69px;
+  }
+}
 
-// @media (max-width: 414px){
-//   canvas {
-//     top: 18vh;
-//     left: 52.5vw;
-//   }
-// }
+@media (max-height: 667px){
 
-// // IphoneX
-// @media (max-width: 375px){
-//   canvas {
-//     left: 58.5vw;
-//   }
-// }
-
-// // Iphone5
-// @media (max-width: 320px){
-//   canvas {
-//     top: 24vh;
-//     left: 81.5vw;
-//   }
-// }
-
-
-
-
-// // iphone 6/7/8, 
-// @media (max-height: 667px) and (min-width: 375px){
-//   canvas {
-//     left: 64.5vw;
-//   }
-// }
-
-// // Galaxy S5, 
-// @media (max-height: 667px) and (min-width: 360px){
-//   canvas {
-//     top: 21vh;
-//     left: 70.5vw;
-//   }
-// }
-
-// @media (min-height:883px) and (min-width: 1025px){
-//   canvas {
-//     top: 8vh;
-//   }
-// }
-
+  #wrapper1 canvas {
+    bottom: 91px;
+  }
+}
 
