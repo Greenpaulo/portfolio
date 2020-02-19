@@ -16,3 +16,11 @@ footer {
     color: #666666
   }
 }
+
+//Media queries
+@media (max-width: 375px){
+  
+  #footer-content span {
+    font-size: 0.6rem;
+  }
+}

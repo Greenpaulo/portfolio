@@ -598,3 +598,11 @@ tl.from('#title3', { opacity: 0, duration: 1, ease: "bounce.out", delay: dl})
 
 
 
+// Alter skills section titles on smaller screens
+const title2 = document.getElementById('title2');
+const title3 = document.getElementById('title3');
+
+if (window.innerWidth < 735) {
+  title2.innerHTML = 'Frameworks';
+  title3.innerHTML = 'Databases';
+}

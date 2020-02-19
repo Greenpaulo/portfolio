@@ -102,3 +102,27 @@ button {
     transform: scaleX(1);
   }
 }
+
+// Media queries
+@media (max-width: 680px){
+
+  #inputs {
+    flex-direction: column;
+    text-align: center;
+
+    & > div {
+      margin: auto;
+    }
+  }
+
+  #contact-info, #msg, form button {
+    width: 60%;
+  }
+}
+
+@media (max-width: 460px){
+
+  #contact-info, #msg, form button {
+    width: 80%;
+  }
+}
