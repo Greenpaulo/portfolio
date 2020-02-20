@@ -115,13 +115,9 @@ section#skills {
 }
 
 @media (max-width: 735px){
-  #skills-content #col-2 .db-lib{
-    display: none;
-  }
-}
-
-@media (max-width: 735px){
-  #skills-content #col-2 .frameworks{
+  #skills-content #col-2 .db-lib,
+  #skills-content #col-2 .frameworks
+  {
     display: none;
   }
 }
@@ -144,6 +140,11 @@ section#skills {
 }
 
 @media(max-width: 480px){
+
+  #skills-content {
+    padding: 6rem 1rem 5rem 0;
+  }
+
   #skills-content h3 {
     font-size: 1.8rem;
   }
@@ -153,6 +154,10 @@ section#skills {
 
   #skills-content #col-1{
     margin-left: 1rem;
+  }
+
+  #navbar h3 {
+    margin-left: 0;
   }
 }
 

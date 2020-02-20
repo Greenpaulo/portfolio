@@ -146,9 +146,9 @@ h1#name {
 @media (max-width: 560px){
   #main-info {
   
-    #title h1 {
-      font-size: 1.8rem;
-    }
+    // #title h1 {
+    //   font-size: 2rem;
+    // }
 
     #links {
       font-size: 0.6rem;
@@ -178,7 +178,7 @@ h1#name {
 
   #wrapper1 canvas {
     // left: 20px;
-    left: 38px;
+    left: 0;
   }
   
 }
@@ -186,9 +186,20 @@ h1#name {
 @media (max-width: 400px) {
 
   #wrapper1 canvas {
-    // left: -27px;
-    left: -9px;
+    left: -27px;
+    // left: -9px;
   }
+}
+
+@media (max-width: 340px) {
+
+  #main-info {
+
+  
+    #title h1 {
+      font-size: 1.8rem;
+    }
+}
 }
 
 
@@ -211,19 +222,19 @@ h1#name {
 @media (max-height: 667px){
 
   #wrapper1 canvas {
-    // bottom: 62px;
+    bottom: 62px;
   }
 }
 
 @media (max-height: 600px){
 
   #wrapper1 canvas {
-    // bottom: 91px;
-    bottom: 0;
+    bottom: 91px;
+    // bottom: 0;
   }
 
   #main-info {
-    margin-top: 8rem;
+    // margin-top: 8rem;
   }
 }
 
