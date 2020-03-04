@@ -122,9 +122,60 @@ header#navbar {
 
 @media (max-width: 550px){
 
-  // Change into hamburger menu
-  #navbar h3 {
-    font-size: 1rem;
+  header#navbar {
+    padding: 0;
   }
+
+  #header-content {
+    padding: 0.4rem 0;
+  }
+  
+  #nav-menu li {
+    display: none;
+  }
+  
+  #nav-menu li:nth-child(4) {
+    display: inline-block;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+
+    &:hover {
+      background-color: var(--primary-color);
+    }
+    
+    a {
+      color: white;
+    }
+  }
+
+
+
+  // header#navbar {
+  //   padding-top: 0;
+  // }
+
+  // #header-content {
+  //   display: flex;
+  //   justify-content: space-between;
+  // }
+
+  // #navbar h3 {
+  //   font-size: 1rem;
+  //   padding: 1rem 0;
+  //   margin-left: 0.5rem;
+  // }
+
+  // #nav-menu {
+  //   display: grid;
+  //   grid-template-columns: 1fr 1fr;
+  //   margin-right: 0;
+  //   overflow: hidden;
+  //   height: 100%;
+
+  //   li {
+  //     font-size: 0.7rem;
+  //     padding: 0;
+  //   }
+  // }
 }
 
