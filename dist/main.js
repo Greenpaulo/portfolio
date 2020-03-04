@@ -606,3 +606,43 @@ if (window.innerWidth < 735) {
   title2.innerHTML = 'Frameworks';
   title3.innerHTML = 'Databases';
 }
+
+
+
+// Navbar for mobile
+
+let dropdownActive = false;
+
+const toggleDropdown = () => {
+
+  // If not already showing and then open
+  // Note: check the browser width to stop dropdown opening when the login button is clicked on wider screens
+  if (dropdownActive === false && window.innerWidth < 1131) {
+
+    const dropdown = document.querySelector("#dropdown-nav");
+    dropdown.classList.toggle('animated');
+    dropdown.classList.toggle('fadeInDown');
+    dropdown.style.zIndex = "2";
+    dropdown.style.display = "block"
+
+    // Set variable opacity dependent on width of display
+    if (window.innerWidth < 500) {
+      dropdown.style.opacity = "1";
+    } else {
+      dropdown.style.opacity = "0";
+    };
+    
+    dropdownActive = true;
+
+  } else {
+    // Its open, so close
+    const dropdown = document.querySelector("#dropdown-nav");
+    dropdown.classList.toggle('animated');
+    dropdown.classList.toggle('fadeInDown');
+    dropdown.style.opacity = "0";
+    dropdown.style.display = "none";
+    dropdown.style.zIndex = "0";
+    
+    dropdownActive = false;
+  }
+}

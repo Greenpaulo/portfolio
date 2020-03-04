@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 @import 'navbar';
+@import 'dropdown';
 @import 'showcase';
 // @import 'spinner';
 @import 'about';
@@ -8,6 +9,10 @@
 @import 'skills';
 @import 'contact';
 @import 'footer';
+
+header #dropdown-nav {
+  display:none;
+}
 
 :root {
   --primary-color: #f3dafd;

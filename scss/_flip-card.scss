@@ -28,9 +28,11 @@
   transform-style: preserve-3d;
 }
 
-.card:hover .card-content {
-  -webkit-transform: rotateY(.5turn);
+.card:hover .card-content,
+.card:active .card-content
+ {
   transform: rotateY(.5turn);
+  -webkit-transform: rotateY(.5turn);
 }
 
 .card-front,
