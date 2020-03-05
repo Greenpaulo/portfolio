@@ -44,6 +44,7 @@
   right: 0;
   padding: 5em 3em;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   transform-style: preserve-3d;
   display: grid;
   align-content: center;
@@ -121,7 +122,9 @@
     list-style: none;
     font-size: 1.5rem;
   }
+}
 
+.card {
   a {
     text-decoration: none;
     color:white;
@@ -144,11 +147,36 @@
   }
 }
 
+.mobile-links {
+  display: none;
+}
+
 
 // Media queries
 @media (max-width: 450px){
   .card {
     width: 350px;
+  }
+
+  // Disable card rotate on mobiles
+  .card:hover .card-content,
+  .card:active .card-content
+  {
+    transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+  }
+
+  // Show mobile links underneath flip cards on mobile
+  .mobile-links {
+    display: inline;
+  }
+
+  .card {
+    a {
+      display: inline-block;
+      width: 40%;
+      margin: 0;
+    }
   }
 }
 
