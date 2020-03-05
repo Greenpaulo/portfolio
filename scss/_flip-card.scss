@@ -55,10 +55,8 @@
   background-image: url('../imgs/the_herbalist.png');
   background-size: cover;
   background-position: center;
-  // background-blend-mode: overlay;
-  // color: #333;
-  // color: white;
 }
+
 .card-front#journey_to_dev {
   background-color:  rgba(0, 0, 0, .7);
   background-image: url('../imgs/journey_to_dev.png');
@@ -66,7 +64,6 @@
   background-position: center;
   background-blend-mode: overlay;
   color: lighten(#b7c9e5, 10%);
-  // color: white;
 }
 
 .card-front::before {
