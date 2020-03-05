@@ -5,7 +5,6 @@ const wrapper2 = document.getElementById('wrapper2');
 
 function spinner(wrapperEl, flag) {
   'use strict';
-  // let wrapper, canvas, ctx, width, height,
   let wrapper = wrapperEl;
   let canvas, ctx, width, height,
     Tau = Math.PI * 2, PI180 = Math.PI / 180,
@@ -95,7 +94,6 @@ function spinner(wrapperEl, flag) {
           diameter: 5,
           degrees: 0,
           speed: 2 + (loop * 0.15) - (i * 0.2),
-          // speed: (2 + (loop * 0.15) - (i * 0.2)) / 2,
           colour: 'hsla(' + (i * (360 / loop) - 200) + ',50%,50%,1)',
           orbitalRadius: 11 * (i + 1),
           parentBody: 'sun'
@@ -106,7 +104,6 @@ function spinner(wrapperEl, flag) {
           diameter: 5,
           degrees: 0,
           speed: 2 + (loop * 0.15) - (i * 0.2),
-          // speed: (2 + (loop * 0.15) - (i * 0.2))/2,
           colour: 'hsla(' + (i * (360 / loop)) + ',50%,50%,1)',
           orbitalRadius: 11 * (i + 1),
           parentBody: 'sun'
