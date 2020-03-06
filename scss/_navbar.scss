@@ -23,12 +23,12 @@ header#navbar {
 
 
 .cls-1 {
-  fill: var(--secondary-color);
+  fill: var(--tertiary-color);
 }
       
 .cls-2 {
   fill: none;
-  stroke: var(--secondary-color);
+  stroke: var(--tertiary-color);
   stroke-miterlimit: 10;
   stroke-width: 6px;
 }
@@ -97,14 +97,21 @@ header#navbar {
 }
 
 // Media queries
+@media (max-width: 1130px) {
+  #brand {
+    margin-left: 2rem;
+  }
+}
+
+
 @media (max-width: 1024px) {
   #header-content.container {
     width: 100%;
   }
 
-  #navbar h3 {
-    margin-left: 2rem;
-  }
+  // #navbar h3 {
+  //   margin-left: 2rem;
+  // }
 }
 
 @media (max-width: 800px) {
@@ -120,17 +127,21 @@ header#navbar {
     margin-right: 1rem;
   }
 
-  #navbar h3 {
-    margin-left: 1rem;
-  }
+  // #navbar h3 {
+  //   margin-left: 1rem;
+  // }
   
 }
 
-@media (max-width: 640px) {
+@media (max-width: 655px) {
   
   .nav-link {
     margin-right: 0;
     padding: 0.75rem 0.8rem;
+  }
+
+  #logo {
+    height: 50px;
   }
 
   #navbar h3 {
@@ -139,10 +150,22 @@ header#navbar {
   
 }
 
-@media (max-width: 550px){
+@media (max-width: 562px){
 
   header#navbar {
     padding: 0;
+  }
+
+  #logo {
+    margin: 0.5rem 0;
+  }
+
+  #brand {
+    margin-left: 0.7rem;
+  }
+
+  #navbar h3 {
+    padding: 1.4rem 0 0.5rem 0.4rem;
   }
 
   #header-content {
@@ -165,6 +188,21 @@ header#navbar {
     a {
       color: white;
     }
+  }
+}
+
+@media (max-width: 360px) {
+  #navbar h3 {
+    font-size: 0.9rem;
+    padding: 1.3rem 0 0.5rem 0rem;
+  }
+
+  #logo {
+    height: 40px;
+  }
+
+  #brand {
+    margin-left: 0.1rem;
   }
 }
 
