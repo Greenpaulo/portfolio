@@ -136,10 +136,20 @@
     &.app-btn {
       background: var(--primary-color);
       color: black;
+      transition: background 0.4s ease-in-out;
+
+      &:hover {
+        background: lighten(#f3dafd, 10%)
+      }
     }
 
     &.code-btn {
       background: var(--secondary-color);
+      transition: background 0.4s ease-in-out;
+
+      &:hover {
+        background: darken(#c95dc9, 10%)
+      }
     }
   }
 }
