@@ -10,14 +10,42 @@ header#navbar {
   border-bottom: 1px black solid;
 }
 
+// Branding
+#brand {
+  display: flex;
+}
+
+#logo {
+  height: 60px;
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+
+.cls-1 {
+  fill: var(--secondary-color);
+}
+      
+.cls-2 {
+  fill: none;
+  stroke: var(--secondary-color);
+  stroke-miterlimit: 10;
+  stroke-width: 6px;
+}
+      
+.cls-3 {
+  fill: #fff;
+}
+
 #navbar h3 {
-  padding: 1rem 1.5rem;
+  padding: 1rem;
   font-size: 1.6rem;
 
   a {
     text-decoration: none;
     color: black;
   }
+
 }
 
 #nav-menu {
