@@ -162,7 +162,6 @@ function spinner(wrapperEl, flag) {
         width = 0;
     }
 
-    console.log(flag);
     if (flag) {
       canvas.width = width;
     } else {
@@ -218,7 +217,6 @@ function spinner(wrapperEl, flag) {
     requestAnimationFrame(animate);
   }
 
-  console.log(wrapper);
   init(wrapper);
   animate();
 
