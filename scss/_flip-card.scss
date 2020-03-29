@@ -178,6 +178,11 @@
     display: inline;
   }
 
+  // Hide card back on mobile
+  .card-back {
+    display: none;
+  }
+
   .card {
     a {
       display: inline-block;
