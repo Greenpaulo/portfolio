@@ -145,8 +145,10 @@ section#portfolio {
       margin-bottom: 0;
     }
 
-    #journey-description {
-      margin-top: 3rem;
+    #journey-description, #codetunes-description {
+      margin-top: 2rem;
+      border-top: 5px solid var(--secondary-color);
+      padding-top: 4rem;
     }
     
   }
@@ -190,6 +192,26 @@ section#portfolio {
     grid-column: 1 / 2;
   }
   li#gsap {
+    grid-row: 6 / 7;
+    grid-column: 2 / 3;
+  }
+  li#react2 {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+  }
+  li#graphql {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+  }
+  li#node2 {
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+  }
+  li#express2 {
+    grid-row: 5 / 6;
+    grid-column: 1 / 2;
+  }
+  li#mongodb2 {
     grid-row: 6 / 7;
     grid-column: 2 / 3;
   }
