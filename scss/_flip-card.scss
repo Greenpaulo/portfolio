@@ -58,10 +58,19 @@
 }
 
 .card-front#journey_to_dev {
-  background-color:  rgba(0, 0, 0, .7);
+  background-color:  rgba(0, 0, 0, .4);
   background-image: url('../imgs/journey_to_dev.png');
   background-size: cover;
   background-position: center;
+  background-blend-mode: overlay;
+  color: lighten(#b7c9e5, 10%);
+}
+
+.card-front#codetunes {
+  background-color:  rgba(0, 0, 0, .1);
+  background-image: url('../imgs/codetunes3.png');
+  background-size: cover;
+  // background-position: center;
   background-blend-mode: overlay;
   color: lighten(#b7c9e5, 10%);
 }
