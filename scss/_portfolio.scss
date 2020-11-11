@@ -99,6 +99,15 @@ section#portfolio {
   margin-top: 2rem;
 }
 
+.herbfinder-mobilelinks-text {
+  line-height: 1.6rem;
+  margin-top: 3rem;
+}
+
+#mobile-expo-links {
+  margin-bottom: 3rem;
+}
+
 
 @media (max-width: 1000px) {
 
@@ -120,6 +129,11 @@ section#portfolio {
 
     #journey-description {
       grid-row: 3 / 4;
+      margin-top: 5rem;
+    }
+
+    #herbfinder-description {
+      grid-row: 7 / 8;
       margin-top: 5rem;
     }
 
