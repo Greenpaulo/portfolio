@@ -75,6 +75,15 @@
   color: lighten(#b7c9e5, 10%);
 }
 
+.card-front#herb_finder {
+  background-color:  rgba(0, 0, 0, 0.5);
+  background-image: url('../imgs/herb_finder.png');
+  background-size: cover;
+  // background-position: center;
+  background-blend-mode: overlay;
+  color: lighten(#b7c9e5, 15%);
+}
+
 .card-front::before {
   content: '';
   position: absolute;
@@ -102,6 +111,10 @@
   margin-bottom: 0.5rem;
   font-weight: var(--fw-bold);
   opacity: .7;
+}
+
+#herbfinder-card .card-subtitle {
+  opacity: 1;
 }
 
 .card-body {
