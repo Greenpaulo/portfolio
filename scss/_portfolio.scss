@@ -34,10 +34,20 @@ section#portfolio {
       margin: 2rem 0 0 6rem;
     }
 
+    ul.herb-finder-logos {
+      display: block;
+      width: 35%;
+      margin: auto;
+    }
+
     // Tech logos
     img {
       max-height: 50px;
       margin-right: 0.6rem;
+    }
+
+    img#QR-code {
+      max-height: 120px;
     }
 
     img[src="imgs/node.png"]{

@@ -112,6 +112,13 @@
   text-transform: uppercase;
 }
 
+#herb-finder-back {
+  p {
+    font-size: 1rem;
+    text-transform: none;
+  }
+}
+
 .card-back {
   transform: rotateY(.5turn);
   color: var(--clr);
@@ -160,7 +167,30 @@
         background: darken(#c95dc9, 10%)
       }
     }
+
+    &.herb-finder-expo-btn {
+      display: inline-block;
+      width: 30%;
+      margin: 1rem;
+      padding: 0.5rem;
+      font-size: 0.7rem;
+    }
+
+    &.herb-finder-code-btn {
+      width: 37%;
+      height: 46px;
+      margin-top: 2rem;
+      padding: 0.8rem;
+      font-size: 0.8rem;
+      text-align: center;
+    }
   }
+}
+
+#herb-finder-qr-codelink.card-body {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
 }
 
 .mobile-links {
