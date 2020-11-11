@@ -112,6 +112,10 @@ section#portfolio {
 
 @media (max-width: 1000px) {
 
+  section#portfolio {
+    margin-bottom: 0;
+  }
+
   section#portfolio #projects {
     display: grid;
     grid-template-columns: 1fr;
@@ -138,6 +142,12 @@ section#portfolio {
       margin-top: 5rem;
     }
 
+    #herb_finder .card-subtitle {
+      margin-bottom: 1.5rem;
+    }
+
+    
+
   }
 }
 
@@ -159,6 +169,10 @@ section#portfolio {
 
 @media (max-width: 480px){
 
+  section#portfolio {
+    padding-bottom: 0;
+  }
+
   section#portfolio #projects {
     
     ul.tech-logos {
@@ -170,7 +184,7 @@ section#portfolio {
       margin-bottom: 0;
     }
 
-    #journey-description, #codetunes-description {
+    #journey-description, #codetunes-description, #herbfinder-description {
       margin-top: 2rem;
       border-top: 5px solid var(--secondary-color);
       padding-top: 4rem;
