@@ -207,6 +207,10 @@
   }
 }
 
+.mobile-links#herbfinder-mobilelinks .card-body {
+  transform: none;
+}
+
 #herb-finder-qr-codelink.card-body {
   display: flex;
   justify-content: space-around;
