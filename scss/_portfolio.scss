@@ -43,7 +43,8 @@ section#portfolio {
     }
 
     // Tech logos
-    img {
+    img,
+    svg {
       max-height: 50px;
       margin-right: 0.6rem;
     }
@@ -87,6 +88,11 @@ section#portfolio {
     }
 
     img[src='imgs/graphql.png'] {
+      margin-left: 0.3rem;
+      margin-right: 0.8rem;
+    }
+
+    img[src='imgs/postman.jpg'] {
       margin-left: 0.3rem;
       margin-right: 0.8rem;
     }
