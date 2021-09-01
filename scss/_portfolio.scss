@@ -4,11 +4,13 @@ section#portfolio {
   .section-heading {
     border-color: var(--secondary-color);
   }
-  
+
   #projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 5rem;
+    grid-column-gap: 5rem;
+    grid-row-gap: 6rem;
+    align-items: center;
 
     h3 {
       font-size: 2rem;
@@ -50,43 +52,43 @@ section#portfolio {
       max-height: 120px;
     }
 
-    img[src="imgs/node.png"]{
-      margin-left: 0.3rem; 
-      margin-right: 0.9rem; 
+    img[src='imgs/node.png'] {
+      margin-left: 0.3rem;
+      margin-right: 0.9rem;
     }
 
-    img[src="imgs/express.png"]{
+    img[src='imgs/express.png'] {
       margin-left: 0.1rem;
-      margin-right: 0.8rem; 
+      margin-right: 0.8rem;
     }
 
-    img[src="imgs/mongodb.png"]{
+    img[src='imgs/mongodb.png'] {
       margin-left: 0.2rem;
-      margin-right: 0.8rem; 
+      margin-right: 0.8rem;
     }
 
-    img[src="imgs/passport.png"]{
+    img[src='imgs/passport.png'] {
       margin-left: 0.2rem;
-      margin-right: 0.8rem; 
+      margin-right: 0.8rem;
     }
 
-    img[src="imgs/laravel.png"]{
+    img[src='imgs/laravel.png'] {
       margin-left: 0.4rem;
-      margin-right: 0.8rem; 
+      margin-right: 0.8rem;
     }
 
-    img[src="imgs/bootstrap.png"]{
+    img[src='imgs/bootstrap.png'] {
       margin-left: 0.3rem;
-      margin-right: 0.8rem; 
+      margin-right: 0.8rem;
     }
 
-    img[src="imgs/next.png"]{
-      margin-right: 1rem; 
+    img[src='imgs/next.png'] {
+      margin-right: 1rem;
     }
 
-    img[src="imgs/graphql.png"]{
+    img[src='imgs/graphql.png'] {
       margin-left: 0.3rem;
-      margin-right: 0.8rem; 
+      margin-right: 0.8rem;
     }
   }
 }
@@ -95,7 +97,8 @@ section#portfolio {
   margin-left: 1rem;
 }
 
-#journey-card, #journey-description {
+#journey-card,
+#journey-description {
   margin-top: 2rem;
 }
 
@@ -109,9 +112,7 @@ section#portfolio {
   margin-bottom: 1rem;
 }
 
-
 @media (max-width: 1000px) {
-
   section#portfolio {
     margin-bottom: 0;
   }
@@ -145,51 +146,44 @@ section#portfolio {
     #herb_finder .card-subtitle {
       margin-bottom: 1.5rem;
     }
-
-    
-
   }
 }
 
-
 // Media queries
-@media (max-width: 650px){
-
+@media (max-width: 650px) {
   section#portfolio #projects ul.tech-logos {
     margin-left: 4rem;
   }
 }
 
-@media (max-width: 500px){
-
+@media (max-width: 500px) {
   section#portfolio #projects ul.tech-logos {
     margin-left: 2rem;
   }
 }
 
-@media (max-width: 480px){
-
+@media (max-width: 480px) {
   section#portfolio {
     padding-bottom: 0;
   }
 
   section#portfolio #projects {
-    
     ul.tech-logos {
-    grid-template-rows: repeat(6, 1fr);
-    margin-top: 3rem;
+      grid-template-rows: repeat(6, 1fr);
+      margin-top: 3rem;
     }
 
     li {
       margin-bottom: 0;
     }
 
-    #journey-description, #codetunes-description, #herbfinder-description {
+    #journey-description,
+    #codetunes-description,
+    #herbfinder-description {
       margin-top: 2rem;
       border-top: 5px solid var(--secondary-color);
       padding-top: 4rem;
     }
-    
   }
 
   li#redux {
@@ -254,21 +248,16 @@ section#portfolio {
     grid-row: 6 / 7;
     grid-column: 2 / 3;
   }
-    
 }
 
-@media (max-width: 415px){
-
+@media (max-width: 415px) {
   section#portfolio #projects ul.tech-logos {
     margin: 0;
   }
-
 }
 
-@media (max-width: 352px){
-
+@media (max-width: 352px) {
   section#portfolio #projects {
-  
     ul.tech-logos {
       display: flex;
       flex-direction: column;
@@ -284,4 +273,3 @@ section#portfolio {
     }
   }
 }
-
