@@ -92,11 +92,11 @@
 }
 
 .card-front#essences-api {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
   background-image: url('../imgs/essences-api.png');
   background-size: cover;
   background-blend-mode: overlay;
-  color: lighten(#b7c9e5, 15%);
+  color: lighten(black, 5%);
 }
 
 .card-front::before {
